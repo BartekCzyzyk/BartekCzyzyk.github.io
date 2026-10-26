@@ -10,18 +10,20 @@
 
 * **Imię:** Bartek (12 lat, pasjonat technologii, świetny uczeń, wysokie wymagania na informatyce i matematyce).
 * **Technologie na start:** Scratch (proste projekty i gry), podstawy HTML/CSS (własna strona).
-* **Kolejne kroki:** Podstawy Git/GitHub (zarządzanie projektami), efektywne promptowanie AI.
+* **Środowisko pracy (STRIKTNA WYTYCZNA):** Wyłącznie narzędzia graficzne i wizualne. Używamy programu GitHub Desktop oraz strony WWW. Całkowity zakaz wprowadzania tekstowych komend w konsoli (Git Bash), aby nauka była prosta, intuicyjna i przyjemna.
 * **Mentor na miejscu:** Tata (Wojciech – doświadczony inżynier embedded).
 
 ### 📋 Projekty i Kamienie Milowe
 
 * **Główny cel etapu 1:** Stworzenie profesjonalnego portfolio na GitHubie, którym można zaimponować w szkole i przed kolegami.
 * **Projekt wizytówka:** Własna strona internetowa na GitHub Pages (BartekCzyzyk.github.io) łącząca opisy hobby, testy AI oraz interaktywny salon gier ze Scratcha.
+* **Aktualne repozytorium:** https://github.com/BartekCzyzyk/projekt
 
 ### 🔄 Historia Breakpointów (Punkty Przywracania)
 
 ### Breakpoint #1: Inicjalizacja Planu Tata-Syn (26.10.2026)
 
-* Oficjalne powitanie Bartka w świecie Embedded i Open Source.
-* Uruchomienie dedykowanego profilu kontekstowego „BartekCzyzyk”.
-* Plan na dziś: rejestracja na GitHubie, instalacja Gita na laptopie i wrzucenie tego pliku jako pierwszego projektu
+* Oficjalne powitanie Bartka w świecie Open Source.
+* Repozytorium pomyślnie zmienione na czytelną nazwę "projekt".
+* Sukces techniczny: Tata przetestował "rozpoznanie walką" i pomyślnie wdrożył autoryzację tokenem.
+* Ustalenie strategii 100% wizualnej (GitHub Desktop) – przygotowanie środowiska pod samodzielną pracę Bartka na jego laptopie.
