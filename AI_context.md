@@ -16,7 +16,7 @@
 ### 📋 Projekty i Kamienie Milowe
 
 * **Główny cel etapu 1:** Stworzenie profesjonalnego portfolio na GitHubie, którym można zaimponować w szkole i przed kolegami.
-* **Projekt wizytówka:** Własna strona internetowa na GitHub Pages (BartekCzyzyk.github.io) łącząca opisy hobby, testy AI oraz interaktywny salon gier ze Scratcha.
+* **Projekt wizytówka:** Własna strona internetowa na GitHub Pages (BartekCzyzyk.github.io/projekt) łącząca opisy hobby, testy AI oraz interaktywny salon gier ze Scratcha.
 * **Aktualne repozytorium:** https://github.com/BartekCzyzyk/projekt
 
 ### 🔄 Historia Breakpointów (Punkty Przywracania)
@@ -25,5 +25,11 @@
 
 * Oficjalne powitanie Bartka w świecie Open Source.
 * Repozytorium pomyślnie zmienione na czytelną nazwę "projekt".
-* Sukces techniczny: Tata przetestował "rozpoznanie walką" i pomyślnie wdrożył autoryzację tokenem.
-* Ustalenie strategii 100% wizualnej (GitHub Desktop) – przygotowanie środowiska pod samodzielną pracę Bartka na jego laptopie.
+* Sukces techniczny: Tata przetestował "rozpoznanie walką" i pomyślnie wdrożył autoryzację.
+* Ustalenie strategii 100% wizualnej (GitHub Desktop / WWW) – przygotowanie środowiska pod samodzielną pracę Bartka na jego laptopie.
+
+### Breakpoint #2: Start Projektu WWW (26.10.2026 - AKTUALNY PUNKT STARTU)
+
+* Środowisko przygotowane do uruchomienia darmowego hostingu GitHub Pages.
+* Plan na teraz: Stworzenie przez Bartka pierwszego w życiu pliku index.html przez stronę WWW i uruchomienie własnej witryny internetowej.
+* Kolejny krok: Nauka osadzania i opisywania projektów ze Scratcha bezpośrednio na własnej stronie.
