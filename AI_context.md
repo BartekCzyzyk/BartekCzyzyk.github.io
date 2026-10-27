@@ -15,11 +15,13 @@
 
   * **Kosmos & Klocki:** Saturn V złożony z 1969 elementów w wieku 6 lat. Znajomość Układu Słonecznego i jego księżyców. Wizyta w Centrum Nauki Kopernik.
   * **Nauki ścisłe:** Samodzielnie narysowana tablica Mendelejewa, znajomość pierwiastków (mimo braku chemii w szkole), pasja do matematyki i historii.
-  * **Gry & Twórczość:** Minecraft, Roblox, Duolingo (hiszpański), pasja do nagrywania filmików na YouTube.
+  * **Gry & Twórczość:** Minecraft, Roblox, Duolingo (hispzański), pasja do nagrywania filmików na YouTube.
   * **Piłka nożna:** Pozycja bramkarza. Idole: Ronaldo, Messi, Mbappé, Lewandowski, Szczęsny. Pokój urządzony w motywie piłkarskim przez rodziców.
-* **Kontekst rodzinny:** Najstarszy z rodzeństwa (brat Krzyś 9 lat, siostra Ola 4 lata). Pomaga rodzicom i opiekuje się młodszymi. Laptop to nagroda za czerwony pasek.
-* **Konfiguracja YouTube:** Oficjalny kanał "Bartek Czyżyk" jest podpięty pod główne konto taty (ze względu na ograniczenia wiekowe Family Link). Na laptopie Bartka stworzony zostanie osobny profil przeglądarki z zapamiętanym dostępem wyłącznie do YouTube Studio, co daje mu pełną samodzielność twórczą pod dyskretną kontrolą taty.
-* **Mentor na miejscu:** Tata (Wojciech – doświadczony inżynier embedded).
+* **Konfiguracja kont zewnętrznych:** 
+
+  * YouTube: Kanał "Bartek Czyżyk" spięty z kontem taty. Włączone globalne zezwolenie na osadzanie filmów (embedding).
+  * Scratch: Oficjalne konto zweryfikowane mailem rodzica, w pełni gotowe do udostępniania gier i generowania kodów Embed.
+* **Mentor na miejscu:** Tata (Wojciech – doświadczony inżynierski nawigator).
 
 ### 📋 Projekty i Kamienie Milowe
 
@@ -32,9 +34,9 @@
 
 * Powitanie Bartka, utworzenie repozytorium "projekt", test zapisu taty zakończony sukcesem.
 
-### Breakpoint #2: Integracja Profilu Osobowościowego (27.10.2026 - AKTUALNY)
+### Breakpoint #2: Zamknięcie Testów PoC i Gotowość Bartka (27.10.2026 - AKTUALNY)
 
-* Wgranie pełnego profilu zainteresowań Bartka ("Styl z Bullerbyn").
-* Dodanie wytycznych dotyczących odseparowania i konfiguracji konta YouTube w strukturze Family Link.
-* Plik index.html z pełnym kodem startowym strony oraz sekcjami na pasje i gry został pomyślnie zabezpieczony w repozytorium.
-* Gotowość do uruchomienia hostingu GitHub Pages wspólnie z Bartkiem.
+* Pełen sukces inżynierskiego rozpoznania walką (PoC) przeprowadzonego przez Tatę.
+* Przetestowano i potwierdzono prawidłowe osadzanie gier ze Scratcha oraz filmów z YouTube (wraz z konfiguracją uprawnień w YouTube Studio).
+* **Stan kodu:** Przywrócony do 100% czystego, wyjściowego szablonu strony.
+* **Punkt startu dla Bartka:** Środowisko w chmurze jest idealnie wyczyszczone. Czekamy na wejście Bartka, który rozpocznie pracę nad swoją własną oficjalną zawartością poprzez GitHub Desktop / WWW.
