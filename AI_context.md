@@ -26,7 +26,7 @@
 ### 📋 Projekty i Kamienie Milowe
 
 * **Projekt wizytówka:** Własna strona internetowa na GitHub Pages (BartekCzyzyk.github.io/projekt) łącząca opisy hobby, wideo z YouTube oraz interaktywny salon gier ze Scratcha.
-* **Aktualne repozytorium:** https://github.com/BartekCzyzyk/projekt
+* **Aktualne repozytorium:** https://github.com/BartekCzyzyk/BartekCzyzyk.github.io
 
 ### 🔄 Historia Breakpointów (Punkty Przywracania)
 
