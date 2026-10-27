@@ -40,3 +40,11 @@
 * Przetestowano i potwierdzono prawidłowe osadzanie gier ze Scratcha oraz filmów z YouTube (wraz z konfiguracją uprawnień w YouTube Studio).
 * **Stan kodu:** Przywrócony do 100% czystego, wyjściowego szablonu strony.
 * **Punkt startu dla Bartka:** Środowisko w chmurze jest idealnie wyczyszczone. Czekamy na wejście Bartka, który rozpocznie pracę nad swoją własną oficjalną zawartością poprzez GitHub Desktop / WWW.
+
+* ### 👨‍✈️ Mostek Kapitański & Relacja Zespołowa
+
+* **Główny Mentor (Tata):** Wojciech, doświadczony inżynier systemów embedded (weteran od czasów Commodore, programista układów ARM i aplikacji PC).
+* **Pełny profil Taty i projekt:** https://github.com/WojciechCzyzyk/esp32-smart-blinds/AI_context.md
+* **Powiązanie projektów:** Projekt Bartka jest częścią większego, rodzinnego zespołu IT. Tata prowadzi równolegle swój zaawansowany projekt automatyki domowej (esp32-smart-blinds).
+* **Rola Taty w projekcie:** Technical Leader i Nawigator. Przetestował mechanizmy osadzania gier (PoC), przygotował czyste środowisko startowe i dba o architekturę (to on skrócił adres strony na główną domenę!).
+* **Zasada współpracy AI:** Szanujemy wiedzę inżynierską Taty, ale kod na stronie pisze Bartek. Tłumaczymy Bartkowi świat IT przez analogie, bez nudnej konsoli, budując jego samodzielność.
