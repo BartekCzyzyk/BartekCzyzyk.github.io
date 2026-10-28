@@ -13,12 +13,13 @@
 * **Środowisko pracy (STRIKTNA WYTYCZNA):** Wyłącznie narzędzia graficzne (GitHub Desktop / strona WWW). Całkowity zakaz komend tekstowych w konsoli, aby nauka była prosta, intuicyjna i przyjemna.
 * **Kluczowe pasje i punkty odniesienia dla AI (Używaj do analogii!):** 
 
-  * **Kosmos & Klocki:** Saturn V złożony z 1969 elementów w wieku 6 lat. Znajomość Układu Słonecznego i jego księżyców. Wizyta w Centrum Nauki Kopernik.
-  * **Nauki ścisłe:** Samodzielnie narysowana tablica Mendelejewa, znajomość pierwiastków (mimo braku chemii w szkole), pasja do matematyki i historii.
-  * **Gry & Twórczość:** Minecraft, Roblox, Duolingo (hispzański), pasja do nagrywania filmików na YouTube.
-  * **Piłka nożna:** Pozycja bramkarza. Idole: Ronaldo, Messi, Mbappé, Lewandowski, Szczęsny. Pokój urządzony w motywie piłkarskim przez rodziców.
-* **Konfiguracja kont zewnętrznych:** 
+* **Kosmos & Klocki:** Saturn V złożony z 1969 elementów w wieku 6 lat. Znajomość Układu Słonecznego i jego księżyców. Wizyta w Centrum Nauki Kopernik. Potężna kreatywność w budowaniu z LEGO – Bartek sam wpadł na pomysł trików filmowych (np. podmienianie klocków przy zatrzymanym nagrywaniu, żeby zasymulować włączenie telewizora przez ludziki LEGO!).
+* **Nauki ścisłe & Eksperymenty:** Samodzielnie narysowana tablica Mendelejewa, znajomość pierwiastków, pasja do matematyki i historii. Uwielbia eksperymenty fizyczne (np. ciśnienie atmosferyczne – szklanka wody z kartką papieru).
+* **Sztuczna Inteligencja & Szachy:** Wykazuje niesamowitą inżynierską pomysłowość – sam przeprowadził eksperyment, testując różne modele AI pod kątem gry w szachy (podając im współrzędne pól, układ pionków i robiąc zdjęcia szachownicy).
+* **Gry & YouTube:** Minecraft, Roblox, Duolingo (hiszpański). Od 4-5 lat pasjonuje się nagrywaniem i montowaniem filmów. Świetnie analizuje warsztat innych YouTuberów i wyciąga wnioski. Potrafi z humorem i jasnym językiem wytłumaczyć zasady gier komputerowych ("Ogień i Woda") oraz planszowych ("Raz, dwa, trzy... wilk patrzy!").
+* **Piłka nożna:** Pozycja bramkarza. Idole: Ronaldo, Messi, Mbappé, Lewandowski, Szczęsny. Pokój urządzony w motywie piłkarskim przez rodziców.
 
+* **Konfiguracja kont zewnętrznych:** 
   * YouTube: Kanał "Bartek Czyżyk" spięty z kontem taty. Włączone globalne zezwolenie na osadzanie filmów (embedding).
   * Scratch: Oficjalne konto zweryfikowane mailem rodzica, w pełni gotowe do udostępniania gier i generowania kodów Embed.
 * **Mentor na miejscu:** Tata (Wojciech – doświadczony inżynierski nawigator).
