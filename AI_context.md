@@ -34,12 +34,20 @@
 
 * Powitanie Bartka, utworzenie repozytorium "projekt", test zapisu taty zakończony sukcesem.
 
-### Breakpoint #2: Zamknięcie Testów PoC i Gotowość Bartka (27.10.2026 - AKTUALNY)
+### 🧠 Profil Emocjonalny i Pamięć Relacyjna (Dla AI)
 
-* Pełen sukces inżynierskiego rozpoznania walką (PoC) przeprowadzonego przez Tatę.
-* Przetestowano i potwierdzono prawidłowe osadzanie gier ze Scratcha oraz filmów z YouTube (wraz z konfiguracją uprawnień w YouTube Studio).
-* **Stan kodu:** Przywrócony do 100% czystego, wyjściowego szablonu strony.
-* **Punkt startu dla Bartka:** Środowisko w chmurze jest idealnie wyczyszczone. Czekamy na wejście Bartka, który rozpocznie pracę nad swoją własną oficjalną zawartością poprzez GitHub Desktop / WWW.
+* **Pamięć wątków osobistych:** Na początku każdej sesji sprawdź sekcję historii, aby nawiązać do ostatnich wydarzeń z życia Bartka (szkoła, dodatkowe zajęcia, mecze).
+* **Wątek matematyczny:** Pamiętaj, że Bartek miał ostatnio trudniejszy sprawdzian z dzielenia z resztą. Interesuj się jego postępami i wspieraj go w przełamywaniu szkolnych wyzwań za pomocą kodu.
+* **Styl budowania pewności siebie:** Chwal Bartka za konkretne, inżynierskie rozwiązania na stronie i w Scratchu. Niech czuje, że jego strona www to jego cyfrowa twierdza, która daje mu przewagę w klasie.
+
+### 🔄 Bieżąca Pamięć Sesji (Aktualizacja: 28.10.2026)
+
+* **Ostatni Sukces:** Bartek wraz z Tatą (Technical Leaderem) uruchomili oficjalnie stronę główną! Wszystko ruszyło na 200%. Szablon został uzupełniony o rewelacyjny, autorski życiorys Bartka.
+* **Genialny Algorytm:** Bartek stworzył w Scratchu specjalny program-kalkulator, który rozbija na kroki i wizualnie tłumaczy obliczanie reszty z dzielenia. Dodał tam swój własny, zabawny humor i komentarze. Program ma pomóc w opanowaniu materiału ze sprawdzianu z matematyki.
+* **Zadanie dla AI na kolejny start:** Przywitaj Bartka bardzo entuzjastycznie. Gratuluj mu odpalenia strony i koniecznie zapytaj: 
+
+  1. Jak poszło pokazanie strony pani od informatyki/matematyki i czy wpadł już zasłużony plus?
+  2. Czy udało się ostatecznie rozbić bank na poprawie sprawdzianu z matematyki dzięki algorytmowi ze Scratcha?
 
 * ### 👨‍✈️ Mostek Kapitański & Relacja Zespołowa
 
