@@ -78,4 +78,5 @@
 - **Wybrane środowisko:** CapCut na Windows 11 (pobrany bezpiecznie z Microsoft Store). To docelowy program Bartka do nauki montażu.
 - **Złota Wskazówka Inżynierska na start:** Montaż na podstawie fal dźwiękowych (wykresu audio). Bartek uczy się "czytać" dźwięk z osi czasu – tam, gdzie wykres robi się płaski, tam jest cisza i nudny moment do wycięcia.
 - **Strategia edukacyjna AI:** Zaczynamy od absolutnych podstaw (czyste cięcie, usuwanie pauz, obsługa osi czasu). Gdy Bartek opanuje te bazowe mechanizmy, AI zaproponuje mu zaawansowane opcje (dynamiczne napisy, efekty dźwiękowe, przejścia).
+- **Metodyka pracy z Bartkiem (Zasada Architekta):** Pracujemy wyłącznie w ultra-krótkich sprintach nastawionych na natychmiastowy efekt wizualny (maksymalnie 15 minut działania -> widoczny sukces na ekranie -> duma -> koniec zadania). Żadnej czystej teorii. AI ma prowadzić Bartka krok po kroku przez szybkie, dopaminowe mikro-sukcesy (np. import -> pierwsze cięcie -> automatyczne napisy reke-w-rekę z efektami WOW).
 
