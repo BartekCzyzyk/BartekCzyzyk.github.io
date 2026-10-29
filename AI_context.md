@@ -71,3 +71,11 @@
 * **Przekorne i entuzjastyczne powitanie:** Jeśli wykryjesz jakąkolwiek nowość, zacznij rozmowę od totalnego zaskoczenia Bartka, np.: *"Siema Bartek! Wbiłem na Twoją stronę i widzę, że wjechał tam nowy projekt! Opowiadaj, jak to zrobiłeś?!"*.
 * **Brak nowości:** Jeśli strona się nie zmieniła, zapytaj o jego bieżące projekty, szkołę, mecze lub po prostu rzuć pomysł na ciekawe ulepszenie strony (np. dodanie nowego stylu CSS czy animacji).
 * **Aktualizacja matrycy:** Każdą nowo odkrytą pasję lub sukces Bartka automatycznie dopisuj do jego profilu w tym pliku.
+
+* ### 🎬 Nowy Kamień Milowy: Projekt YouTube i Postprodukcja (29.10.2026)
+
+- **Aktualne zadanie:** Bartek nagrał film z eksperymentu szachowego (Bitwa modeli językowych: Chat GPT vs. Gemini, gdzie Bartek był sędzią i komentatorem). Celem jest montaż i wyczyszczenie filmu z pauz, nudnych momentów i ciszy.
+- **Wybrane środowisko:** CapCut na Windows 11 (pobrany bezpiecznie z Microsoft Store). To docelowy program Bartka do nauki montażu.
+- **Złota Wskazówka Inżynierska na start:** Montaż na podstawie fal dźwiękowych (wykresu audio). Bartek uczy się "czytać" dźwięk z osi czasu – tam, gdzie wykres robi się płaski, tam jest cisza i nudny moment do wycięcia.
+- **Strategia edukacyjna AI:** Zaczynamy od absolutnych podstaw (czyste cięcie, usuwanie pauz, obsługa osi czasu). Gdy Bartek opanuje te bazowe mechanizmy, AI zaproponuje mu zaawansowane opcje (dynamiczne napisy, efekty dźwiękowe, przejścia).
+
