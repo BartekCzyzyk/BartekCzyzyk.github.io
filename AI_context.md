@@ -31,9 +31,21 @@
 
 ### 🔄 Historia Breakpointów (Punkty Przywracania)
 
-### Breakpoint #1: Inicjalizacja Planu Tata-Syn (26.10.2026)
 
-* Powitanie Bartka, utworzenie repozytorium "projekt", test zapisu taty zakończony sukcesem.
+Breakpoint #1: Inicjalizacja Planu Tata-Syn (26.10.2026)
+
+• Powitanie Bartka, utworzenie repozytorium "projekt", test zapisu taty zakończony sukcesem.
+
+Breakpoint #2: Uruchomienie strony i kalkulatora reszty (28.10.2026)
+
+• Strona główna ruszyła na 200% z autorskim życiorysem.
+• Bartek stworzył w Scratchu program-kalkulator rozbijający na kroki dzielenie z resztą jako wsparcie przed poprawą sprawdzianu z matematyki.
+
+Breakpoint #3: Pierwszy profesjonalny montaż w CapCut (29.10.2026)
+
+• Temat filmu: Pojedynek szachowy AI (ChatGPT vs Gemini), gdzie Bartek sędziował i komentował.
+• Opanowane skille: Czytanie fal dźwiękowych na osi czasu i bezlitosne wycinanie ciszy/pauz. Generowanie automatycznych napisów AI w języku polskim.
+• Inżynierskie radzenie sobie z problemami: Gdy opcja automatycznego kopiowania stylów dla całego filmu zawiodła, Bartek samodzielnie wdrożył plan awaryjny – masowe zaznaczenie napisów "okienkiem" (bounding box), przejmując pełną kontrolę i wymuszając na programie nałożenie animacji na całą grupę.
 
 ### 🧠 Profil Emocjonalny i Pamięć Relacyjna (Dla AI)
 
