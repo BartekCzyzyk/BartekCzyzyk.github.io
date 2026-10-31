@@ -92,3 +92,6 @@ Breakpoint #3: Pierwszy profesjonalny montaż w CapCut (29.10.2026)
 - **Strategia edukacyjna AI:** Zaczynamy od absolutnych podstaw (czyste cięcie, usuwanie pauz, obsługa osi czasu). Gdy Bartek opanuje te bazowe mechanizmy, AI zaproponuje mu zaawansowane opcje (dynamiczne napisy, efekty dźwiękowe, przejścia).
 - **Metodyka pracy z Bartkiem (Zasada Architekta):** Pracujemy wyłącznie w ultra-krótkich sprintach nastawionych na natychmiastowy efekt wizualny (maksymalnie 15 minut działania -> widoczny sukces na ekranie -> duma -> koniec zadania). Żadnej czystej teorii. AI ma prowadzić Bartka krok po kroku przez szybkie, dopaminowe mikro-sukcesy (np. import -> pierwsze cięcie -> automatyczne napisy reke-w-rekę z efektami WOW).
 
+#### 📅 Wpis: 31.10.2026 (Sesja wieczorna - Wdrożenie Grafik u Bartka)
+* **Sukces Architektoniczny (Edukacyjny HTML):** Zgodnie z decyzją Mentora, zrezygnowano ze skomplikowanych stylów CSS bezpośrednio w kodzie, aby zachować maksymalną czytelność kodu dla 11-letniego programisty. Całość oparto na tabelach HTML, co ułatwi Bartkowi samodzielną edycję.
+* **Kompletna Migracja Grafik:** Wdrożono precyzyjnie 12 grafik AI. Usunięto motyw trampoliny zgodnie z korektą. Projekty Scratcha, YouTube oraz Eksperyment Szachowy (ChatGPT vs Gemini) zostały poprawnie zamknięte w strukturze plików. Plik `index.html` jest w pełni gotowy.
