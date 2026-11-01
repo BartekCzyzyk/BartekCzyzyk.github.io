@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Poligon Testowy Bartka</title>
+</head>
+<body>
+    <div id="poligon-content">Ładowanie poligonu deweloperskiego...</div>
+
+    <script>
+        // Skrypt pobiera na żywo najnowszą wersję index.html z gałęzi 'test'
+        const url = 'https://githubusercontent.com';
+        
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                // Podmieniamy zawartość strony na tę z poligonu
+                document.open();
+                document.write(html);
+                document.close();
+            })
+            .catch(err => {
+                document.getElementById('poligon-content').innerText = 'Błąd ładowania poligonu: ' + err;
+            });
+    </script>
+</body>
+</html>
