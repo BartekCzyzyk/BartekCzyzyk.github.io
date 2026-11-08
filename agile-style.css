@@ -1,0 +1,39 @@
+.section-agile {
+    background-color: rgba(255, 255, 255, 0.05); /* Delikatne odróżnienie tła sekcji */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+}
+.section-subtitle {
+    margin-bottom: 30px;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+.agile-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.agile-card {
+    flex: 1 1 45%;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.agile-card h3 {
+    margin-top: 0;
+    color: #4af6c7; /* Lub Twój akcent kolorystyczny ze strony */
+}
+.agile-card ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+.agile-card li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+@media (max-width: 768px) {
+    .agile-card {
+        flex: 1 1 100%;
+    }
+}
