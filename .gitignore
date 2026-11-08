@@ -1,0 +1,10 @@
+# Ignoruj wszystkie pliki graficzne w projekcie
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# Ignoruj pliki systemowe Windows/Mac (opcjonalnie, dla czystości)
+Thumbs.db
+.DS_Store
