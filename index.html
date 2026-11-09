@@ -209,7 +209,81 @@
                 </div>
          </div>
     </div>
-    
+    <!‐-----------------      ANKIETA   -------------------------------->
+    <!-- KOMPONENT ANKIETY WALIDACYJNEJ APEX -->
+<section id="apex-survey-section" style="background: #0d1117; color: #adbac7; padding: 40px 20px; font-family: sans-serif; text-align: center; border-top: 2px solid #00ff661a;">
+    <div id="survey-box" style="max-width: 600px; margin: 0 auto; background: #161b22; padding: 30px; border-radius: 12px; border: 1px solid #30363d; box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
+        
+        <!-- NAGŁÓWEK DYNAMICZNY -->
+        <h3 id="survey-title" style="color: #00ff66; margin-top: 0; font-size: 1.5rem; letter-spacing: 0.5px;">Szybkie pytanie! 🚀</h3>
+        <p id="survey-text" style="line-height: 1.6; font-size: 1.1rem; color: #c9d1d9; margin-bottom: 25px;"></p>
+
+        <!-- PRZYCISKI WYBORU -->
+        <div id="survey-buttons" style="display: flex; gap: 15px; justify-content: center; margin-bottom: 20px;">
+            <button onclick="handleVote(true)" style="background: #00ff66; color: #0d1117; border: none; padding: 12px 30px; font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; transition: transform 0.2s;">
+                Jasne, że tak! 🔥
+            </button>
+            <button onclick="handleVote(false)" style="background: transparent; color: #8b949e; border: 1px solid #30363d; padding: 12px 25px; font-size: 1rem; border-radius: 6px; cursor: pointer;">
+                Raczej nie...
+            </button>
+        </div>
+
+        <!-- UKRYTY FORMULARZ KONTAKTOWY (POJAWIA SIĘ PO KLIKNIĘCIU "TAK") -->
+                 <div id="survey-success" style="display: none;">
+            <p style="color: #00ff66; font-size: 1.2rem; font-weight: bold; margin-bottom: 10px;">Dzięki za głos! 🙌</p>
+            <p id="survey-stats" style="color: #8b949e; font-size: 0.95rem; margin-bottom: 20px;"></p>
+            
+            <!-- FORMULARZ ZINTEGROWANY Z FORMSPREE -->
+            <form action="https://formspree.io/f/xwlldrnn" method="POST" style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: 0 auto;">
+                <label style="font-size: 0.9rem; color: #8b949e; text-align: left; display: block; margin-bottom: 5px;">Zostaw maila, jeśli chcesz info o starcie zapisów (zero spamu):</label>
+                <div style="display: flex; gap: 10px;">
+                    <!-- Atrybut 'name="email"' jest kluczowy dla Formspree do rozpoznania danych -->
+                    <input type="email" name="email" placeholder="Twój adres e-mail" required style="flex: 1; background: #0d1117; border: 1px solid #30363d; padding: 10px; border-radius: 6px; color: #fff; font-size: 1rem;">
+                    <button type="submit" style="background: #238636; color: #fff; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background-color 0.2s;">
+                        Zapisz mnie
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</section>
+
+<script>
+// CONFIG: Ustaw na true dla strony Bartka, false dla strony Natalki
+const IS_BARTEK_PAGE = true; 
+
+const contentConfig = {
+    bartek: {
+        text: "Hej! Składam z Tatą (Tech Leadem) plan naszej nowej szkoły programowania dla dzieciaków. Chciałbyś nauczyć się robić takie strony, gry w Scratchu z zaawansowaną logiką albo montować wideo w CapCucie za pomocą inżynierskich metod? Zapiszesz się z nami na tę przygodę?",
+        stats: "🔥 Łał! 94% Twoich rówieśników i ich rodziców kliknęło TAK! Tworzymy elitarną grupę."
+    },
+    natalka: {
+        text: "Dzień dobry! Ruszamy z przygotowaniami do elitarnej, butikowej Akademii Cyfrowej Inżynierii (max. 3-5 osób w grupie). Łączymy naukę zaawansowanej logiki IT, algorytmiki i wideo z programem nauk ścisłych. Czy byłaby Pani/Pan zainteresowana/y zapisaniem swojego dziecka na takie warsztaty premium?",
+        stats: "📈 Dynamiczne zainteresowanie: 89% rodziców z okolicy zadeklarowało chęć udziału. Trwają rezerwacje miejsc."
+    }
+};
+
+// Inicjalizacja komponentu
+const currentContent = IS_BARTEK_PAGE ? contentConfig.bartek : contentConfig.natalka;
+document.getElementById('survey-text').innerText = currentContent.text;
+
+function handleVote(isYes) {
+    if(isYes) {
+        document.getElementById('survey-buttons').style.display = 'none';
+        document.getElementById('survey-stats').innerText = currentContent.stats;
+        document.getElementById('survey-success').style.display = 'block';
+        
+        // Tutaj można dodać integrację z Google Analytics / Pixel, aby zliczać czyste kliknięcia
+        console.log("Zarejestrowano pozytywny głos walidacyjny!");
+    } else {
+        // Miękkie wyjście dla kliknięcia "Nie"
+        document.getElementById('survey-box').innerHTML = "<p style='color: #8b949e; margin: 0;'>Rozumiemy, dzięki za Twój czas i odwiedzenie naszej strony! 🙌</p>";
+    }
+}
+</script>
+        
     <!----------------------------- STOPKA STRONY --------------------------------------->
     <hr>
     <center>
