@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trener Historyczny - Konkurs SP2 Jelenia Góra</title>
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-bright: #ffffff;
+            --accent-green: #2ea043;
+            --accent-green-hover: #3fb950;
+            --accent-blue: #58a6ff;
+            --correct-bg: rgba(46, 160, 67, 0.2);
+            --correct-border: #3fb950;
+            --wrong-bg: rgba(248, 81, 73, 0.2);
+            --wrong-border: #f85149;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 16px; }
+        .container { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; width: 100%; max-width: 680px; padding: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+        header { text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 16px; margin-bottom: 20px; }
+        header h1 { color: var(--text-bright); font-size: 1.5rem; margin-bottom: 6px; }
+        header p { color: var(--accent-blue); font-size: 0.9rem; font-weight: 600; }
+        .stage-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 16px; }
+        .stage-btn { background-color: #21262d; border: 1px solid var(--border-color); color: var(--text-bright); padding: 16px; border-radius: 8px; text-align: left; cursor: pointer; transition: all 0.2s; display: flex; justify-content: space-between; align-items: center; }
+        .stage-btn:hover { border-color: var(--accent-green-hover); background-color: #292f36; transform: translateY(-2px); }
+        .stage-btn span.badge { background-color: var(--accent-green); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 12px; font-weight: bold; }
+        .stage-btn.boss-mode { border-color: var(--accent-blue); background: linear-gradient(135deg, #161b22 0%, #1f2937 100%); }
+        .hidden { display: none !important; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; font-size: 0.9rem; color: #8b949e; }
+        .progress-bar { width: 100%; height: 6px; background-color: #21262d; border-radius: 3px; margin-bottom: 20px; overflow: hidden; }
+        .progress-fill { height: 100%; background-color: var(--accent-green-hover); width: 0%; transition: width 0.3s ease; }
+        .question-text { color: var(--text-bright); font-size: 1.2rem; line-height: 1.5; margin-bottom: 20px; }
+        .options-list { display: flex; flex-direction: column; gap: 10px; }
+        .option-btn { background-color: #21262d; border: 1px solid var(--border-color); color: var(--text-main); padding: 14px 16px; border-radius: 8px; text-align: left; font-size: 1rem; cursor: pointer; transition: all 0.15s; }
+        .option-btn:hover:not(:disabled) { border-color: var(--accent-blue); color: var(--text-bright); }
+        .option-btn:disabled { cursor: default; }
+        .option-btn.correct { background-color: var(--correct-bg); border-color: var(--correct-border); color: var(--text-bright); font-weight: 600; }
+        .option-btn.wrong { background-color: var(--wrong-bg); border-color: var(--wrong-border); color: var(--text-bright); }
+        .explanation-box { margin-top: 16px; padding: 14px; border-radius: 8px; background-color: #0d1117; border-left: 4px solid var(--accent-blue); font-size: 0.95rem; line-height: 1.4; }
+        .action-btn { margin-top: 20px; width: 100%; padding: 14px; background-color: var(--accent-green); color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .action-btn:hover { background-color: var(--accent-green-hover); }
+        .secondary-btn { background-color: #21262d; border: 1px solid var(--border-color); margin-top: 10px; }
+        .result-box { text-align: center; padding: 10px 0; }
+        .score-circle { font-size: 2.5rem; font-weight: bold; color: var(--accent-green-hover); margin: 16px 0; }
+        .rank-title { font-size: 1.3rem; color: var(--text-bright); margin-bottom: 10px; }
+    </style>
+</head>
+
+
+<body>
+<div class="container">
+    <header>
+        <h1>⚔️ Trener Historyczny Bartka</h1>
+        <p>Misja: Konkurs Historyczny — SP nr 2 im. Bolesława Chrobrego</p>
+    </header>
+
+    <div id="menu-screen">
+        <p style="margin-bottom: 12px; color: #8b949e;">Wybierz Sprint treningowy do zaliczenia:</p>
+        <div class="stage-grid">
+            <button class="stage-btn" onclick="startQuiz(1)">
+                <div><strong>👑 Sprint 1: Piastowie i Patron Szkoły</strong><br><small style="color:#8b949e;">Mieszko I, Bolesław Chrobry, Jelenia Góra</small></div>
+                <span class="badge">8 pytań</span>
+            </button>
+            <button class="stage-btn" onclick="startQuiz(2)">
+                <div><strong>⚔️ Sprint 2: Jagiellonowie i Złoty Wiek</strong><br><small style="color:#8b949e;">Grunwald, Kopernik, Unia Lubelska</small></div>
+                <span class="badge">4 pytania</span>
+            </button>
+            <button class="stage-btn" onclick="startQuiz(3)">
+                <div><strong>🛡️ Sprint 3: Królowie elekcyjni i Rozbiory</strong><br><small style="color:#8b949e;">Husaria, Sobieski, Konstytucja 3 Maja</small></div>
+                <span class="badge">5 pytań</span>
+            </button>
+            <button class="stage-btn" onclick="startQuiz(4)">
+                <div><strong>🦅 Sprint 4: 123 lata niewoli (XIX wiek)</strong><br><small style="color:#8b949e;">Legiony, Hymn, Powstania Narodowe</small></div>
+                <span class="badge">3 pytania</span>
+            </button>
+            <button class="stage-btn" onclick="startQuiz(5)">
+                <div><strong>🇵🇱 Sprint 5: Niepodległość i XX wiek</strong><br><small style="color:#8b949e;">1918, Cud nad Wisłą, II WŚ, Solidarność</small></div>
+                <span class="badge">5 pytań</span>
+            </button>
+            <button class="stage-btn boss-mode" onclick="startQuiz(0)">
+                <div><strong>🏆 WIELKI FINAŁ: Symulacja Konkursu</strong><br><small style="color:#58a6ff;">Wszystkie epoki wymieszane razem!</small></div>
+                <span class="badge" style="background-color:#58a6ff; color:#0d1117;">25 pytań</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="quiz-screen" class="hidden">
+        <div class="top-bar">
+            <span id="question-counter">Pytanie 1 / 8</span>
+            <span id="score-counter">Punkty: 0</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="question-text" id="question-text">Treść pytania...</div>
+        <div class="options-list" id="options-list"></div>
+        <div id="explanation-box" class="explanation-box hidden"></div>
+        <button id="next-btn" class="action-btn hidden" onclick="nextQuestion()">Następne pytanie ➔</button>
+        <button class="action-btn secondary-btn" onclick="backToMenu()">↩ Wróć do wyboru etapu</button>
+    </div>
+
+    <div id="result-screen" class="hidden result-box">
+        <h2>🏁 Sprint Zakończony!</h2>
+        <div class="score-circle" id="final-score">8 / 8</div>
+        <div class="rank-title" id="rank-title">Ranga: Wielki Strateg</div>
+        <p id="rank-desc" style="color: #8b949e; margin-bottom: 20px;"></p>
+        <button class="action-btn" onclick="backToMenu()">Wybierz kolejny Sprint ➔</button>
+    </div>
+</div>
+
+<script>
+    const allQuestions = [
+        { stage: 1, q: "W którym roku Mieszko I przyjął chrzest Polski?", options: ["966 r.", "1000 r.", "1025 r.", "997 r."], correct: 0, info: "966 r. to symboliczny początek państwa polskiego. Mieszko I przyjął chrzest za pośrednictwem Czech." },
+        { stage: 1, q: "Co oznacza w staropolszczyźnie przydomek patrona naszej szkoły – „Chrobry”?", options: ["Bogaty i szczodry", "Dzielny, mężny i waleczny", "Wysoki i silny", "Mądry i uczony"], correct: 1, info: "Słowo 'chrobry' oznaczało dawniej kogoś niezwykle odważnego, dzielnego i walecznego." },
+        { stage: 1, q: "Kto przyjechał do Gniezna na słynny Zjazd Gnieźnieński w 1000 roku?", options: ["Król Francji Ludwik", "Cesarz niemiecki Otton III", "Wielki Mistrz Krzyżacki", "Cesarz Henryk II"], correct: 1, info: "Cesarz Otton III przybył z pielgrzymką do grobu św. Wojciecha i nałożył na głowę Chrobrego swój diadem." },
+        { stage: 1, q: "Jakim traktatem w 1018 roku zakończyły się zwycięskie wojny Bolesława Chrobrego z Niemcami?", options: ["Pokojem w Toruniu", "Unią w Krewie", "Pokojem w Budziszynie", "Traktatem w Wersalu"], correct: 2, info: "Pokój w Budziszynie (1018 r.) przyłączył do Polski Łużyce i Milsko." },
+        { stage: 1, q: "W którym roku odbyła się koronacja Bolesława Chrobrego na pierwszego króla Polski?", options: ["966 r.", "1000 r.", "1025 r.", "1138 r."], correct: 2, info: "Uwaga na pułapkę: chrzest Mieszka był w 966 r., ale pierwszym królem został Bolesław Chrobry w 1025 r.!" },
+        { stage: 1, q: "Który władca z dynastii Piastów według legendy założył Jelenią Górę na początku XII wieku?", options: ["Mieszko I", "Bolesław Krzywousty", "Kazimierz Wielki", "Władysław Łokietek"], correct: 1, info: "Według tradycji Jelenią Górę założył ok. 1108–1111 r. Bolesław III Krzywousty po udanym polowaniu na jelenie." },
+        { stage: 1, q: "Co zapoczątkował testament Bolesława Krzywoustego z 1138 roku?", options: ["Złoty Wiek Polski", "Rozbicie dzielnicowe na prawie 200 lat", "Unię z Litwą", "Budowę Zamku na Wawelu"], correct: 1, info: "Podział Polski między synów Krzywoustego wywołał długie rozbicie dzielnicowe, które zakończył dopiero Władysław Łokietek w 1320 r." },
+        { stage: 1, q: "W którym roku król Kazimierz Wielki założył pierwszą polską uczelnię (Akademię Krakowską)?", options: ["1320 r.", "1364 r.", "1410 r.", "1543 r."], correct: 1, info: "Kazimierz Wielki założył Akademię Krakowską (dziś Uniwersytet Jagielloński) w 1364 roku." },
+        { stage: 2, q: "Kto dowodził połączonymi wojskami polsko-litewskimi w wielkiej bitwie pod Grunwaldem (15 lipca 1410 r.)?", options: ["Kazimierz Wielki", "Władysław Jagiełło", "Jan III Sobieski", "Zygmunt Stary"], correct: 1, info: "Król Władysław Jagiełło rozgromił pod Grunwaldem Zakon Krzyżacki." },
+        { stage: 2, q: "Co Polska odzyskała w 1466 roku na mocy II Pokoju Toruńskiego?", options: ["Kijów i Smoleńsk", "Pomorze Gdańskie i dostęp do Morza Bałtyckiego", "Śląsk i Ziemię Lubuską", "Inflanty"], correct: 1, info: "Po wygranej wojnie trzynastoletniej Polska wróciła nad Bałtyk i odzyskała Gdańsk." },
+        { stage: 2, q: "Jakie przełomowe odkrycie opisał Mikołaj Kopernik w 1543 roku?", options: ["Że Ziemia jest płaska", "Że Ziemia i inne planety krążą wokół Słońca", "Prawo grawitacji", "Budowę teleskopu"], correct: 1, info: "Kopernik w dziele 'O obrotach sfer niebieskich' udowodnił teorię heliocentryczną ('wstrzymał Słońce, ruszył Ziemię')." },
+        { stage: 2, q: "Jak nazywało się wspólne państwo Polski i Litwy utworzone w 1569 roku na mocy Unii Lubelskiej?", options: ["Królestwo Polskie", "Rzeczpospolita Obojga Narodów", "Księstwo Warszawskie", "Unia Jagiellońska"], correct: 1, info: "Unia Lubelska z 1569 r. połączyła Koronę i Litwę w Rzeczpospolitą Obojga Narodów." },
+        { stage: 3, q: "Kto został pierwszym królem Polski wybranym w wolnej elekcji w 1573 roku?", options: ["Stefan Batory", "Henryk Walezy", "Jan III Sobieski", "Stanisław August Poniatowski"], correct: 1, info: "Henryk Walezy był pierwszym królem elekcyjnym, choć po kilku miesiącach potajemnie uciekł do Francji." },
+        { stage: 3, q: "Który klasztor obronił się przed Szwedami w 1655 roku podczas 'potopu szwedzkiego'?", options: ["Klasztor w Krzeszowie", "Jasna Góra w Częstochowie", "Opactwo w Tyńcu", "Klasztor na Świętym Krzyżu"], correct: 1, info: "Obrona Jasnej Góry (dowodzona przez przeora Augustyna Kordeckiego) stała się punktem zwrotnym wojny ze Szwecją." },
+        { stage: 3, q: "Który polski król poprowadził husarię do zwycięskiej Odsieczy Wiedeńskiej w 1683 roku?", options: ["Jan III Sobieski", "Zygmunt III Waza", "Władysław IV", "August II Mocny"], correct: 0, info: "12 września 1683 r. Jan III Sobieski rozbił armię turecką pod Wiedniem." },
+        { stage: 3, q: "Kiedy uchwalono pierwszą w Europie nowoczesną konstytucję?", options: ["11 listopada 1918 r.", "3 maja 1791 r.", "15 lipca 1410 r.", "4 czerwca 1989 r."], correct: 1, info: "Konstytucja 3 Maja z 1791 roku była pierwszą konstytucją w Europie i drugą na świecie." },
+        { stage: 3, q: "Które trzy państwa dokonały rozbiorów Polski i na ile lat zniknęliśmy z mapy po 1795 roku?", options: ["Niemcy, Szwecja i Rosja – na 100 lat", "Rosja, Prusy i Austria – na 123 lata", "Turcja, Rosja i Francja – na 150 lat", "Prusy, Francja i Austria – na 123 lata"], correct: 1, info: "Rosja, Prusy i Austria podzieliły Polskę w latach 1772, 1793 i 1795. Niewola trwała 123 lata (do 1918 r.)." },
+
+              { stage: 4, q: "Kto napisał w 1797 roku słowa 'Pieśni Legionów Polskich we Włoszech', czyli naszego hymnu narodowego?", options: ["Adam Mickiewicz", "Józef Wybicki", "Jan Henryk Dąbrowski", "Fryderyk Chopin"], correct: 1, info: "Słowa napisał Józef Wybicki dla Legionów Polskich tworzonych przez gen. Jana Henryka Dąbrowskiego." },
+        { stage: 4, q: "W którym roku wybuchło Powstanie Listopadowe przeciwko Rosji?", options: ["1794 r.", "1830 r.", "1863 r.", "1944 r."], correct: 1, info: "Powstanie Listopadowe wybuchło w nocy z 29 na 30 listopada 1830 roku w Warszawie." },
+        { stage: 4, q: "Które polskie powstanie z XIX wieku było najdłuższe i miało charakter wojny partyzanckiej w lasach?", options: ["Powstanie Wielkopolskie", "Powstanie Styczniowe (1863–1864)", "Insurekcja Kościuszkowska", "Powstanie Listopadowe"], correct: 1, info: "Powstanie Styczniowe trwało od stycznia 1863 r. do jesieni 1864 r. Jednym z jego wodzów był Romuald Traugutt." },
+        { stage: 5, q: "Jakiego dnia obchodzimy Narodowe Święto Niepodległości na pamiątkę odzyskania państwa w 1918 roku?", options: ["3 maja", "15 sierpnia", "11 listopada", "1 września"], correct: 2, info: "11 listopada 1918 roku zakończyła się I wojna światowa, a Józef Piłsudski przejął władzę wojskową w wolnej Warszawie." },
+        { stage: 5, q: "Jak nazywa się wielkie zwycięstwo Wojska Polskiego nad Armią Czerwoną z 15 sierpnia 1920 roku?", options: ["Bitwa pod Grunwaldem", "Bitwa Warszawska (Cud nad Wisłą)", "Bitwa o Anglię", "Bitwa pod Monte Cassino"], correct: 1, info: "Bitwa Warszawska z 1920 r. zatrzymała marsz bolszewików na Europę Zachodnią." },
+        { stage: 5, q: "Kiedy wybuchła II wojna światowa (atak Niemiec na Polskę, m.in. na Westerplatte)?", options: ["1 września 1939 r.", "17 września 1939 r.", "1 sierpnia 1944 r.", "8 maja 1945 r."], correct: 0, info: "II wojna światowa rozpoczęła się 1 września 1939 r. atakiem Niemiec. 17 września od wschodu zaatakował ZSRR." },
+        { stage: 5, q: "Kiedy wybuchło Powstanie Warszawskie i ile dni trwało?", options: ["1 września 1939 r., trwało 30 dni", "1 sierpnia 1944 r., trwało 63 dni", "11 listopada 1918 r., trwało 10 dni", "3 maja 1943 r., trwało 63 dni"], correct: 1, info: "Powstanie Warszawskie wybuchło 1 sierpnia 1944 r. o godzinie 'W' (17:00) i trwało 63 dni." },
+        { stage: 5, q: "Kto stanął na czele wielkiego ruchu społecznego NSZZ „Solidarność”, który powstał w 1980 roku?", options: ["Karol Wojtyła", "Lech Wałęsa", "Józef Piłsudski", "Tadeusz Kościuszko"], correct: 1, info: "Lech Wałęsa był przywódcą strajków w Stoczni Gdańskiej w 1980 r. i pierwszym przewodniczącym 'Solidarności'." }
+    ];
+
+    let currentQuestions = [], currentIndex = 0, score = 0;
+
+    function startQuiz(stage) {
+        currentQuestions = (stage === 0) ? [...allQuestions].sort(() => Math.random() - 0.5) : allQuestions.filter(q => q.stage === stage);
+        currentIndex = 0; score = 0;
+        document.getElementById('menu-screen').classList.add('hidden');
+        document.getElementById('result-screen').classList.add('hidden');
+        document.getElementById('quiz-screen').classList.remove('hidden');
+        showQuestion();
+    }
+
+    function showQuestion() {
+        const qObj = currentQuestions[currentIndex], total = currentQuestions.length;
+        document.getElementById('question-counter').textContent = `Pytanie ${currentIndex + 1} / ${total}`;
+        document.getElementById('score-counter').textContent = `Punkty: ${score}`;
+        document.getElementById('progress-fill').style.width = `${(currentIndex / total) * 100}%`;
+        document.getElementById('question-text').textContent = qObj.q;
+        document.getElementById('explanation-box').classList.add('hidden');
+        document.getElementById('next-btn').classList.add('hidden');
+        const optionsList = document.getElementById('options-list');
+        optionsList.innerHTML = '';
+        qObj.options.forEach((optText, idx) => {
+            const btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.textContent = `${['A', 'B', 'C', 'D'][idx]}. ${optText}`;
+            btn.onclick = () => checkAnswer(idx, btn);
+            optionsList.appendChild(btn);
+        });
+    }
+
+    function checkAnswer(selectedIndex, clickedBtn) {
+        const qObj = currentQuestions[currentIndex], allBtns = document.querySelectorAll('.option-btn');
+        allBtns.forEach(b => b.disabled = true);
+        if (selectedIndex === qObj.correct) { clickedBtn.classList.add('correct'); score++; document.getElementById('score-counter').textContent = `Punkty: ${score}`; }
+        else { clickedBtn.classList.add('wrong'); allBtns[qObj.correct].classList.add('correct'); }
+        const expBox = document.getElementById('explanation-box');
+        expBox.innerHTML = `<strong>💡 Wyjaśnienie:</strong> ${qObj.info}`;
+        expBox.classList.remove('hidden');
+        const nextBtn = document.getElementById('next-btn');
+        nextBtn.textContent = (currentIndex + 1 < currentQuestions.length) ? 'Następne pytanie ➔' : 'Zobacz wynik końcowy 🏆';
+        nextBtn.classList.remove('hidden');
+        document.getElementById('progress-fill').style.width = `${((currentIndex + 1) / currentQuestions.length) * 100}%`;
+    }
+
+    function nextQuestion() {
+        currentIndex++;
+        if (currentIndex < currentQuestions.length) showQuestion();
+        else showResult();
+    }
+
+    function showResult() {
+        document.getElementById('quiz-screen').classList.add('hidden');
+        document.getElementById('result-screen').classList.remove('hidden');
+        const total = currentQuestions.length, percent = Math.round((score / total) * 100);
+        document.getElementById('final-score').textContent = `${score} / ${total} (${percent}%)`;
+        let rank = '', desc = '';
+        if (percent === 100) { rank = '👑 Ranga: Pierwszy Król Polski — Bolesław Chrobry!'; desc = 'Bezbłędny wynik! SP nr 2 w Jeleniej Górze może być z Ciebie dumna. Jesteś w 100% gotowy na konkurs!'; }
+        else if (percent >= 80) { rank = '⚔️ Ranga: Dowódca Drużyny Książęcej'; desc = 'Świetna robota! Znasz najważniejsze daty i wydarzenia. Powtórz tylko te pytania, które sprawiły trudność, i lecisz po podium.'; }
+        else if (percent >= 50) { rank = '🛡️ Ranga: Dzielny Wojownik Piastowski'; desc = 'Dobry fundament! Przeczytaj jeszcze raz notatki z tego Sprintu i zrób drugie podejście, żeby dobić do 100%.'; }
+        else { rank = '📜 Ranga: Młody Kronikarz na Treningu'; desc = 'Spokojnie, po to jest ten poligon! Zerknij do ściągawki z PDF-a i spróbuj ponownie — za drugim razem pójdzie znacznie lepiej!'; }
+        document.getElementById('rank-title').textContent = rank;
+        document.getElementById('rank-desc').textContent = desc;
+    }
+
+    function backToMenu() {
+        document.getElementById('quiz-screen').classList.add('hidden');
+        document.getElementById('result-screen').classList.add('hidden');
+        document.getElementById('menu-screen').classList.remove('hidden');
+    }
+</script>
+</body>
+</html>
+
+  
+  
