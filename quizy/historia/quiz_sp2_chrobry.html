@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Historia SP2 i Bolesław Chrobry | Bartek Dev</title>
+    <link rel="stylesheet" href="quiz_sp2.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🏰 SP2 Jelenia Góra & Bolesław Chrobry</h1>
+        <span class="badge">80-lecie Dwójki (1946–2026)</span>
+    </div>
+
+    <div id="quiz-screen">
+        <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+        <div class="question-meta" id="q-meta">Pytanie 1 z 16</div>
+        <div class="question-text" id="q-text">Ładowanie pytania...</div>
+        <div class="options" id="options"></div>
+        <div class="feedback" id="feedback"></div>
+        <div class="controls">
+            <a href="index.html" class="btn btn-secondary">← Powrót</a>
+            <button class="btn" id="next-btn" style="display:none;" onclick="nextQuestion()">Następne pytanie →</button>
+        </div>
+    </div>
+
+    <div id="result-screen" class="result-box">
+        <h2>🏆 Trening zakończony!</h2>
+        <div class="score-big" id="final-score">0 / 16</div>
+        <p id="result-msg" style="margin-bottom: 24px; color: var(--muted);"></p>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <button class="btn" onclick="restartQuiz()">🔄 Zagraj jeszcze raz</button>
+            <a href="index.html" class="btn btn-secondary">🏠 Strona główna</a>
+        </div>
+    </div>
+</div>
+
+<script src="quiz_sp2_pytania.js"></script>
+<script src="quiz_sp2_silnik.js"></script>
+</body>
+</html>
