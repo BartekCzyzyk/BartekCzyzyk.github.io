@@ -1,0 +1,70 @@
+.ai-mentor-card {
+    background: linear-gradient(145deg, #161b22 0%, #0d1117 100%);
+    border: 2px solid #56d364;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 25px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(86, 211, 100, 0.15);
+    color: #e6edf3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+
+.ai-mentor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ai-mentor-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #56d364;
+    margin: 0;
+}
+
+.ai-mentor-date {
+    font-size: 0.85rem;
+    color: #8b949e;
+    background: #21262d;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.ai-mentor-project {
+    font-size: 0.95rem;
+    color: #79c0ff;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.ai-mentor-box {
+    background: #0d1117;
+    border-left: 4px solid #56d364;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 0 8px 8px 0;
+    line-height: 1.5;
+}
+
+.ai-mentor-box.tip {
+    border-left-color: #d29922;
+}
+
+.ai-mentor-badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 14px;
+    background: rgba(86, 211, 100, 0.15);
+    border: 1px solid #56d364;
+    color: #56d364;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
