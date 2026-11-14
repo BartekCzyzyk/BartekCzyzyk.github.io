@@ -31,7 +31,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python3 - << 'EOF'
-          import os, json, urllib.request
+          import os, json, urllib.request, urllib.error
           from datetime import datetime
 
           api_key = os.environ.get("GEMINI_API_KEY")
@@ -84,7 +84,6 @@ jobs:
               headers={"Content-Type": "application/json"}
           )
 
-                   import urllib.error
           try:
               with urllib.request.urlopen(req) as resp:
                   result = json.loads(resp.read().decode("utf-8"))
@@ -95,7 +94,6 @@ jobs:
           except urllib.error.HTTPError as e:
               print("Błąd HTTP z API Gemini:", e.code, e.read().decode("utf-8"))
               exit(1)
-
 
           status_payload = {
               "data": ai_data["data"],
