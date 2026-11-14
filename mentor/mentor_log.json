@@ -14,6 +14,12 @@
       "projekt": "Quiz Historyczny SP 2 & Centrum Treningowe",
       "podsumowanie": "Rozbudowa strony głównej o modułowy system quizów oraz sekcję dopingową dla klasy 5B.",
       "wskazowka_do_weryfikacji": "Optymalizacja rozmiaru plików graficznych JPG pod kątem szybkiego ładowania na telefonach."
+    },
+    {
+      "data": "2026-11-14",
+      "projekt": "Quiz Historyczny SP 2 & Centrum Treningowe",
+      "podsumowanie": "Aktualizacja sekcji testowej stylów przycisków i integracja zespołu przy rozbudowie modułu quizowego.",
+      "wskazowka_do_weryfikacji": "Skoro sekcja przycisków jest przetestowana z ekipą, zerknijmy teraz na zapowiadaną optymalizację grafik JPG – skompresowanie ich sprawi, że strona odpali się błyskawicznie na każdym telefonie."
     }
   ]
 }
