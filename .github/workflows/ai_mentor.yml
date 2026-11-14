@@ -84,12 +84,18 @@ jobs:
               headers={"Content-Type": "application/json"}
           )
 
-          with urllib.request.urlopen(req) as resp:
-              result = json.loads(resp.read().decode("utf-8"))
-              first_candidate = result["candidates"][0]
-              first_part = first_candidate["content"]["parts"][0]
-              raw_text = first_part["text"]
-              ai_data = json.loads(raw_text)
+                   import urllib.error
+          try:
+              with urllib.request.urlopen(req) as resp:
+                  result = json.loads(resp.read().decode("utf-8"))
+                  first_candidate = next(iter(result["candidates"]))
+                  first_part = next(iter(first_candidate["content"]["parts"]))
+                  raw_text = first_part["text"]
+                  ai_data = json.loads(raw_text)
+          except urllib.error.HTTPError as e:
+              print("Błąd HTTP z API Gemini:", e.code, e.read().decode("utf-8"))
+              exit(1)
+
 
           status_payload = {
               "data": ai_data["data"],
