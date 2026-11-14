@@ -370,41 +370,8 @@
             </a>
         </div>
 <!------------------ KONIEC LINKU DO SZKOLY  ---------------->
-
-                
-                
-                
-                const contentConfig = {
-    bartek: {
-        text: "Hej! Składam z Tatą (Tech Leadem) plan naszej nowej szkoły programowania dla dzieciaków. Chciałbyś nauczyć się robić takie strony, gry w Scratchu z zaawansowaną logiką albo montować wideo w CapCucie za pomocą inżynierskich metod? Zapiszesz się z nami na tę przygodę?",
-        stats: "🔥 Łał! 94% Twoich rówieśników i ich rodziców kliknęło TAK! Tworzymy elitarną grupę."
-    },
-    natalka: {
-        text: "Dzień dobry! Ruszamy z przygotowaniami do elitarnej, butikowej Akademii Cyfrowej Inżynierii (max. 3-5 osób w grupie). Łączymy naukę zaawansowanej logiki IT, algorytmiki i wideo z programem nauk ścisłych. Czy byłaby Pani/Pan zainteresowana/y zapisaniem swojego dziecka na takie warsztaty premium?",
-        stats: "📈 Dynamiczne zainteresowanie: 89% rodziców z okolicy zadeklarowało chęć udziału. Trwają rezerwacje miejsc."
-    }
-};
-
-// Inicjalizacja komponentu
-const currentContent = IS_BARTEK_PAGE ? contentConfig.bartek : contentConfig.natalka;
-document.getElementById('survey-text').innerText = currentContent.text;
-
-function handleVote(isYes) {
-    if(isYes) {
-        document.getElementById('survey-buttons').style.display = 'none';
-        document.getElementById('survey-stats').innerText = currentContent.stats;
-        document.getElementById('survey-success').style.display = 'block';
-        
-        // Tutaj można dodać integrację z Google Analytics / Pixel, aby zliczać czyste kliknięcia
-        console.log("Zarejestrowano pozytywny głos walidacyjny!");
-    } else {
-        // Miękkie wyjście dla kliknięcia "Nie"
-        document.getElementById('survey-box').innerHTML = "<p style='color: #8b949e; margin: 0;'>Rozumiemy, dzięki za Twój czas i odwiedzenie naszej strony! 🙌</p>";
-    }
-}
-</script>
-    <!----------------------------- STOPKA STRONY --------------------------------------->
-
+<!----------------------------- STOPKA STRONY --------------------------------------->
+ 
 <footer style="margin-top: 40px; padding: 20px 15px; border-top: 1px solid #30363d; text-align: center; font-size: 0.9rem; color: #8b949e; background-color: #0d1117;">
     <p style="margin: 0 0 8px 0;">
         🚀 Portfolio i projekty rozwijane w ramach programu 
@@ -416,10 +383,9 @@ function handleVote(isYes) {
 <p>&copy; 2026 Bartek Czyżyk. Wszystkie prawa zastrzeżone. Strona stworzona z pomocą taty! 🚀    
     </p>
 </footer>
-
-    <!----------------------------- STOPKA STRONY --------------------------------------->
-    <hr>
-   
+ <!----------------------------- STOPKA STRONY --------------------------------------->
+    
+    </hr> </hr> 
 
 </body>
 </html>
