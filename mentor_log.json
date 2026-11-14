@@ -1,0 +1,19 @@
+{
+  "uczen": "Bartek Czyżyk",
+  "poziom": "Junior Web & Scratch Architect (Klasa 5B)",
+  "ostatnia_aktualizacja": "2026-11-14",
+  "zdobyte_umiejetnosci": [
+    "Podstawy HTML5 i semantyczna struktura strony",
+    "Stylowanie CSS3 (Dark Mode, Flexbox, karty UI)",
+    "Separacja logiki i danych w JavaScript (rozdzielenie silnika quizu od bazy pytań)",
+    "Praca z repozytorium GitHub i gałęziami (main / test)"
+  ],
+  "historia_sesji": [
+    {
+      "data": "2026-11-14",
+      "projekt": "Quiz Historyczny SP 2 & Centrum Treningowe",
+      "podsumowanie": "Rozbudowa strony głównej o modułowy system quizów oraz sekcję dopingową dla klasy 5B.",
+      "wskazowka_do_weryfikacji": "Optymalizacja rozmiaru plików graficznych JPG pod kątem szybkiego ładowania na telefonach."
+    }
+  ]
+}
