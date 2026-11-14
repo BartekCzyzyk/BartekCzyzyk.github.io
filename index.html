@@ -15,7 +15,54 @@
         .football-theme { border-left: 5px solid #28a745; }
         .space-theme { border-left: 5px solid #ffc107; }
         .scratch-box { background-color: #e8f4fd; border: 2px dashed #2a5298; border-radius: 8px; padding: 20px; text-align: center; }
+
+        /* WYRAŹNE PRZYCISKI DO QUIZÓW I SZKOŁY */
+        .button-quiz {
+            display: inline-block;
+            background: linear-gradient(135deg, #2ea043 0%, #238636 100%);
+            color: #ffffff !important;
+            font-size: 1.15rem;
+            font-weight: bold;
+            padding: 15px 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 1px solid #56D364;
+            box-shadow: 0 4px 12px rgba(46, 160, 67, 0.35);
+            text-align: center;
+        }
+        .button-pdf {
+            display: inline-block;
+            background-color: #21262d;
+            color: #56D364 !important;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 14px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 2px solid #56D364;
+            text-align: center;
+        }
+        .button-apex {
+            display: inline-block;
+            background: #00ff66;
+            color: #0d1117 !important;
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding: 16px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.5);
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .button-quiz, .button-pdf, .button-apex {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
     </style>
+
         <link rel="stylesheet" href="agile-style.css">
 </head>
 <body>
@@ -76,7 +123,7 @@
 
         <div class="section football-theme">
             <h3>Gry i Piłka Nożna 🎮⚽</h3>
-            <p><img src="wwew/bartek chatGPT z ronaldo pika nozna.jpg" width="100%" style="max-width: 600px; display: block; margin: 10px auto;" alt="Bartek i Cristiano Ronaldo"></p>
+            <p><img src="www/bartek chatGPT z ronaldo pika nozna.jpg" width="100%" style="max-width: 600px; display: block; margin: 10px auto;" alt="Bartek i Cristiano Ronaldo"></p>
           
             <p>Najbardziej lubię grać na komputerze – aktualnie w Minecrafta oraz gry z Robloxu. Moją wielką pasją jest też piłka nożna. 
                 Ostatnio rodzice zrobili mi cały pokój w tej tematyce! Mam na całej ścianie tapetę z piłką, piłkarskie lampy i obrazki z filmu.
@@ -194,54 +241,70 @@
     </p>  
 </div>
  
-<!------------------ WSZYSTKIE QUIZY --------------------------------->
-<div class="section">
-    <h2>🧠 Moje Centrum Treningowe (Aplikacje Quizowe)</h2>
-    <p>Buduję własne aplikacje webowe do nauki przed sprawdzianami. Kliknij wybrany przedmiot, aby uruchomić interaktywny trener wiedzy:</p>
-    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
-        
-        <!-- Aktywny quiz: Historia -->
-        <div style="border: 1px solid #56D364; padding: 15px; border-radius: 8px; background-color: rgba(86, 211, 100, 0.05);">
-            <h3 style="margin-top: 0; color: #56D364;">🏰 Historia Polski – Konkurs Szkolny</h3>
-            <p style="margin-bottom: 12px; font-size: 0.95rem;">28 kluczowych dat od Mieszka I do współczesności + lokalne ciekawostki o Bolesławie Chrobrym.</p>
-            <a href="quizy/historia/konkurs_szkolny_sp2.html" class="button" style="display: inline-block; text-decoration: none;">
-                ⚔️ Uruchom Trener Historii 🚀</a>
-        </div>
+<!--------->
+    <!------------------ WSZYSTKIE QUIZY --------------------------------->
+    <div class="container">
+        <div class="section" style="background-color: #0d1117; color: #c9d1d9; border: 2px solid #56D364; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+            <h2 style="color: #56D364; border-bottom: 1px solid #30363d; font-size: 1.6rem;">🧠 Moje Centrum Treningowe (Aplikacje Quizowe)</h2>
+            <p style="font-size: 1.05rem; line-height: 1.6; color: #e6edf3;">
+                Zostałem wybrany do reprezentowania klasy w konkursie wiedzy o historii Polski (SP nr 2 im. Bolesława Chrobrego w Jeleniej Górze). Razem z Tatą stworzyliśmy własne, interaktywne aplikacje webowe do nauki przed sprawdzianami. Kliknij duży zielony przycisk, aby zagrać:
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 20px;">
+                
+                <!-- Aktywny quiz: Historia -->
+                <div style="border: 1px solid #30363d; border-left: 5px solid #56D364; padding: 20px; border-radius: 10px; background-color: #161b22;">
+                    <h3 style="margin-top: 0; color: #56D364; font-size: 1.3rem;">🏰 Historia Polski – Konkurs Szkolny</h3>
+                    <p style="margin-bottom: 16px; font-size: 1rem; color: #c9d1d9;">28 kluczowych dat od Mieszka I do współczesności + lokalne ciekawostki o Bolesławie Chrobrym.</p>
+                    <a href="quizy/historia/konkurs_szkolny_sp2.html" class="button-quiz">
+                        ⚔️ Uruchom Trener Historii 🚀
+                    </a>
+                </div>
 
-        <!-- Aktywny quiz: Biologia (Tekstowy) -->
-        <div style="border: 1px solid #56D364; padding: 15px; border-radius: 8px; background-color: rgba(86, 211, 100, 0.05);">
-            <h3 style="margin-top: 0; color: #56D364;">🧬 Biologia – Budowa Komórki (25 pytań)</h3>
-            <p style="margin-bottom: 12px; font-size: 0.95rem;">Kompleksowy test sprawdzianowy: komórka zwierzęca, roślinna, grzybowa i bakteryjna.</p>
-            <a href="quizy/biologia/test_z_bud_komorek.html" class="button" style="display: inline-block; text-decoration: none;">Uruchom Test z Biologii 🚀</a>
-        </div>
+                <!-- Aktywny quiz: Historia SP2 i Chrobry (80-lecie) -->
+                <div style="border: 1px solid #30363d; border-left: 5px solid #56D364; padding: 20px; border-radius: 10px; background-color: #161b22;">
+                    <h3 style="margin-top: 0; color: #56D364; font-size: 1.3rem;">🏫 Historia SP2 i Bolesław Chrobry (80-lecie Dwójki)</h3>
+                    <p style="margin-bottom: 16px; font-size: 1rem; color: #c9d1d9;">Specjalny trening na 80-lecie Szkoły Podstawowej nr 2 w Jeleniej Górze i wiedzy o naszym patronie (16 pytań + pułapka!).</p>
+                    <a href="quizy/historia/quiz_sp2_chrobry.html" class="button-quiz">
+                        🏰 Uruchom Quiz o SP2 🚀
+                    </a>
+                </div>
 
-        <!-- Aktywny quiz: Biologia z obrazkami -->
-        <div style="border: 1px solid #56D364; padding: 15px; border-radius: 8px; background-color: rgba(86, 211, 100, 0.05);">
-            <h3 style="margin-top: 0; color: #56D364;">🔬 Biologia z obrazkami – Rozpoznaj Komórkę</h3>
-            <p style="margin-bottom: 12px; font-size: 0.95rem;">Trening wizualny: rozpoznaj na ilustracjach komórkę zwierzęcą, roślinną, bakteryjną, mitochondrium oraz aparat Golgiego.</p>
-            <a href="quizy/biologia/komorki_obrazki.html" class="button" style="display: inline-block; text-decoration: none;">Uruchom Trener Obrazkowy 🖼️</a>
-        </div>
-        <!-- Aktywny quiz: Historia SP2 i Chrobry (80-lecie) -->
-        <div style="border: 1px solid #56D364; padding: 15px; border-radius: 8px; background-color: rgba(86, 211, 100, 0.05);">
-            <h3 style="margin-top: 0; color: #56D364;">🏫 Historia SP2 i Bolesław Chrobry (80-lecie Dwójki)</h3>
-            <p style="margin-bottom: 12px; font-size: 0.95rem;">Specjalny trening na 80-lecie Szkoły Podstawowej nr 2 w Jeleniej Górze i wiedzy o naszym patronie (16 pytań + pułapka!).</p>
-            <a href="quizy/historia/quiz_sp2_chrobry.html" class="button" style="display: inline-block; text-decoration: none;">
-                🏰 Uruchom Quiz o SP2 🚀</a>
-        </div>
+                <!-- Kompendium PDF: Historia SP2 i Chrobry -->
+                <div style="border: 1px solid #30363d; border-left: 5px solid #56D364; padding: 20px; border-radius: 10px; background-color: #161b22;">
+                    <h3 style="margin-top: 0; color: #56D364; font-size: 1.3rem;">📄 Kompendium PDF: Historia SP2 i Chrobry</h3>
+                    <p style="margin-bottom: 16px; font-size: 1rem; color: #c9d1d9;">Ściąga konkursowa na 1 stronę A4 (historia szkoły, oś czasu i ciekawostki) – pobierz lub wydrukuj!</p>
+                    <a href="quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf" target="_blank" class="button-pdf">
+                        📥 Pobierz Kompendium PDF
+                    </a>
+                </div>
 
-        <!-- Kompendium PDF: Historia SP2 i Chrobry -->
-        <div style="border: 1px solid #56D364; padding: 15px; border-radius: 8px; background-color: rgba(86, 211, 100, 0.05);">
-            <h3 style="margin-top: 0; color: #56D364;">📄 Kompendium PDF: Historia SP2 i Chrobry</h3>
-            <p style="margin-bottom: 12px; font-size: 0.95rem;">Ściąga konkursowa na 1 stronę A4 (historia szkoły, oś czasu i ciekawostki) – pobierz lub wydrukuj!</p>
-            <a href="quizy/historia/Kompendium_SP2_Chrobry_Bartek.pdf" target="_blank" class="button" style="display: inline-block; text-decoration: none;">
-                📥 Pobierz Kompendium PDF</a>
-        </div>
+                <!-- Aktywny quiz: Biologia (Tekstowy) -->
+                <div style="border: 1px solid #30363d; border-left: 5px solid #56D364; padding: 20px; border-radius: 10px; background-color: #161b22;">
+                    <h3 style="margin-top: 0; color: #56D364; font-size: 1.3rem;">🧬 Biologia – Budowa Komórki (25 pytań)</h3>
+                    <p style="margin-bottom: 16px; font-size: 1rem; color: #c9d1d9;">Kompleksowy test sprawdzianowy: komórka zwierzęca, roślinna, grzybowa i bakteryjna.</p>
+                    <a href="quizy/biologia/test_z_bud_komorek.html" class="button-quiz">
+                        🧬 Uruchom Test z Biologii 🚀
+                    </a>
+                </div>
 
+                <!-- Aktywny quiz: Biologia z obrazkami -->
+                <div style="border: 1px solid #30363d; border-left: 5px solid #56D364; padding: 20px; border-radius: 10px; background-color: #161b22;">
+                    <h3 style="margin-top: 0; color: #56D364; font-size: 1.3rem;">🔬 Biologia z obrazkami – Rozpoznaj Komórkę</h3>
+                    <p style="margin-bottom: 16px; font-size: 1rem; color: #c9d1d9;">Trening wizualny: rozpoznaj na ilustracjach komórkę zwierzęcą, roślinną, bakteryjną, mitochondrium oraz aparat Golgiego.</p>
+                    <a href="quizy/biologia/komorki_obrazki.html" class="button-quiz">
+                        🔬 Uruchom Trener Obrazkowy 🖼️
+                    </a>
+                </div>
+
+            </div>
+        </div>
     </div>
-</div>
+
+
 
     
        <!---------------------------- STATYSTYKI -------------------------->
+   <!---------------------------- STATYSTYKI -------------------------->
     <div class="container">
         <div class="section">
                 <h3>📊 Eksperyment ze statystykami: Kto odwiedza moją stronę?</h3>
@@ -296,54 +359,42 @@
         </div>
 <!---------‐----- ANKIETA KONIEC ----------------->
 
- <!------------- LINK DO SZKOLY --------------------->       
-        <div style="margin: 20px 0; padding: 15px; border: 1px dashed #56D364; border-radius: 8px; background-color: rgba(86, 211, 100, 0.05); text-align: center;">
-    <p style="margin: 0 0 10px 0; font-size: 0.95rem;">
-        💡 Podoba Ci się moja strona, gry w Scratchu i quizy przed sprawdzianami?
-    </p>
-    <a href="https://wojciechczyzyk.github.io/sarenka/" target="_blank" class="button" style="display: inline-block; text-decoration: none;">
-        🎓 Zobacz, gdzie się tego uczę – Akademia APEX 🚀
-    </a>
-</div>
-<!------------------ KONIEC LINKU DO SZKOLY  ----------------->
-    </div>
-</section>
 
+<!------------- LINK DO SZKOLY --------------------->       
+        <div style="margin-top: 30px; padding: 22px; border: 2px solid #00ff66; border-radius: 12px; background: linear-gradient(135deg, rgba(0, 255, 102, 0.12) 0%, rgba(13, 17, 23, 0.95) 100%); text-align: center;">
+            <p style="margin: 0 0 15px 0; font-size: 1.1rem; color: #ffffff; font-weight: 500;">
+                💡 Podoba Ci się moja strona, gry w Scratchu i quizy przed sprawdzianami?
+            </p>
+            <a href="https://wojciechczyzyk.github.io/sarenka/" target="_blank" class="button-apex">
+                🎓 Zobacz, gdzie się tego uczę – Akademia APEX 🚀
+            </a>
+        </div>
+<!------------------ KONIEC LINKU DO SZKOLY  ---------------->
+
+        </div>
+</section>   
 <script>
-// CONFIG: Ustaw na true dla strony Bartka, false dla strony Natalki
 const IS_BARTEK_PAGE = true; 
-
 const contentConfig = {
     bartek: {
         text: "Hej! Składam z Tatą (Tech Leadem) plan naszej nowej szkoły programowania dla dzieciaków. Chciałbyś nauczyć się robić takie strony, gry w Scratchu z zaawansowaną logiką albo montować wideo w CapCucie za pomocą inżynierskich metod? Zapiszesz się z nami na tę przygodę?",
         stats: "🔥 Łał! 94% Twoich rówieśników i ich rodziców kliknęło TAK! Tworzymy elitarną grupę."
-    },
-    natalka: {
-        text: "Dzień dobry! Ruszamy z przygotowaniami do elitarnej, butikowej Akademii Cyfrowej Inżynierii (max. 3-5 osób w grupie). Łączymy naukę zaawansowanej logiki IT, algorytmiki i wideo z programem nauk ścisłych. Czy byłaby Pani/Pan zainteresowana/y zapisaniem swojego dziecka na takie warsztaty premium?",
-        stats: "📈 Dynamiczne zainteresowanie: 89% rodziców z okolicy zadeklarowało chęć udziału. Trwają rezerwacje miejsc."
     }
 };
-
-// Inicjalizacja komponentu
-const currentContent = IS_BARTEK_PAGE ? contentConfig.bartek : contentConfig.natalka;
-document.getElementById('survey-text').innerText = currentContent.text;
-
+document.getElementById('survey-text').innerText = contentConfig.bartek.text;
 function handleVote(isYes) {
     if(isYes) {
         document.getElementById('survey-buttons').style.display = 'none';
-        document.getElementById('survey-stats').innerText = currentContent.stats;
+        document.getElementById('survey-stats').innerText = contentConfig.bartek.stats;
         document.getElementById('survey-success').style.display = 'block';
-        
-        // Tutaj można dodać integrację z Google Analytics / Pixel, aby zliczać czyste kliknięcia
-        console.log("Zarejestrowano pozytywny głos walidacyjny!");
     } else {
-        // Miękkie wyjście dla kliknięcia "Nie"
         document.getElementById('survey-box').innerHTML = "<p style='color: #8b949e; margin: 0;'>Rozumiemy, dzięki za Twój czas i odwiedzenie naszej strony! 🙌</p>";
     }
 }
 </script>
-    <!----------------------------- STOPKA STRONY --------------------------------------->
-
+    
+<!----------------------------- STOPKA STRONY --------------------------------------->
+ 
 <footer style="margin-top: 40px; padding: 20px 15px; border-top: 1px solid #30363d; text-align: center; font-size: 0.9rem; color: #8b949e; background-color: #0d1117;">
     <p style="margin: 0 0 8px 0;">
         🚀 Portfolio i projekty rozwijane w ramach programu 
@@ -355,10 +406,9 @@ function handleVote(isYes) {
 <p>&copy; 2026 Bartek Czyżyk. Wszystkie prawa zastrzeżone. Strona stworzona z pomocą taty! 🚀    
     </p>
 </footer>
-
-    <!----------------------------- STOPKA STRONY --------------------------------------->
-    <hr>
-   
+ <!----------------------------- STOPKA STRONY --------------------------------------->
+    
+    </hr> </hr> 
 
 </body>
 </html>
