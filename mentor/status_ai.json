@@ -1,7 +1,7 @@
 {
   "data": "16.11.2026",
-  "projekt": "Wizytówka & Centrum Treningowe SP 2",
-  "pochwala": "Świetna robota, Bartek! Dodałeś dedykowaną ikonę strony (favicon) oraz wsparcie dla urządzeń Apple, dzięki czemu Twoja strona wygląda mega profesjonalnie w zakładkach przeglądarki i na ekranach telefonów. Bardzo podoba mi się też sprytny trik z parametrem `?v=1`, który wymusza odświeżenie grafiki w pamięci podręcznej – to cecha prawdziwego web developera!",
-  "wskazowka": "Upewnij się, że plik `favicon_bartek.png` jest zoptymalizowany pod kątem wagi i znajduje się w głównym katalogu projektu. W kolejnym kroku możemy wrócić do skompresowania pozostałych grafik JPG na stronie, żeby całość śmigała błyskawicznie!",
-  "odznaka": "Mistrz Brandingu i Favicona 🎨"
+  "projekt": "Centrum Treningowe – Moduł Geograficzny",
+  "pochwala": "Świetna robota z dodaniem nowej sekcji dla klasy 5! Karta trenera geografii wygląda super, a zielona ramka (#56D364) idealnie pasuje do ciemnego motywu. Bardzo podoba mi się też to, jak dbasz o porządek w kodzie – czytelne komentarze początek/koniec i posprzątanie sekcji statystyk to nawyk prawdziwego profesjonalisty.",
+  "wskazowka": "Zauważ, że style karty masz wpisane bezpośrednio w `style=\"...\"` – w wolnej chwili możesz przenieść je do klasy CSS (np. `.quiz-card`), żeby kod był jeszcze zgrabniejszy i gotowy do szybkiego użycia przy kolejnych przedmiotach!",
+  "odznaka": "Nawigator Wiedzy 🌍"
 }

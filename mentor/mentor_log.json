@@ -26,6 +26,12 @@
       "projekt": "Wizytówka & Centrum Treningowe SP 2",
       "podsumowanie": "Wdrożenie dedykowanej ikony favicon oraz apple-touch-icon z mechanizmem odświeżania pamięci podręcznej.",
       "wskazowka_do_weryfikacji": "Upewnij się, że plik `favicon_bartek.png` jest zoptymalizowany pod kątem wagi i znajduje się w głównym katalogu projektu. W kolejnym kroku możemy wrócić do skompresowania pozostałych grafik JPG na stronie, żeby całość śmigała błyskawicznie!"
+    },
+    {
+      "data": "2026-11-16",
+      "projekt": "Centrum Treningowe – Moduł Geograficzny",
+      "podsumowanie": "Wdrożenie nowej karty trenera geografii z dedykowanym obramowaniem oraz uporządkowanie struktury komentarzy HTML.",
+      "wskazowka_do_weryfikacji": "Zauważ, że style karty masz wpisane bezpośrednio w `style=\"...\"` – w wolnej chwili możesz przenieść je do klasy CSS (np. `.quiz-card`), żeby kod był jeszcze zgrabniejszy i gotowy do szybkiego użycia przy kolejnych przedmiotach!"
     }
   ]
 }
