@@ -1,4 +1,4 @@
-// Wspólny silnik interaktywnych quizów Akademii APEX (Fajerwerk Reakcji Awatara .jpg + Automatyczna Stopka)
+// Wspólny silnik interaktywnych quizów Akademii APEX (Fajerwerk Reakcji + 5 Poziomów Końcowych + Automatyczna Stopka)
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Automatyczne wstrzyknięcie spójnej stopki Akademii APEX pod każdym quizem
     const mainContainer = document.querySelector('.container') || document.body;
@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const finalScoreText = document.getElementById('final-score-text');
     const restartBtn = document.getElementById('restart-btn');
 
+    if (quizBox) quizBox.style.display = 'block';
+    if (resultBox) resultBox.style.display = 'none';
+
     function loadQuestion() {
         answered = false;
         const current = quizQuestions[currentIndex];
@@ -50,9 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
         questionText.textContent = current.question;
 
         answersContainer.innerHTML = '';
-        feedbackBox.className = 'feedback hidden';
+        feedbackBox.style.display = 'none';
         feedbackBox.innerHTML = '';
-        nextBtn.classList.add('hidden');
+        nextBtn.style.display = 'none';
 
         current.answers.forEach((answerText, index) => {
             const btn = document.createElement('button');
@@ -85,14 +88,16 @@ document.addEventListener('DOMContentLoaded', () => {
             scoreCounter.textContent = `Wynik: ${score} pkt`;
         }
 
-        // Wybór grafiki reakcji awatara (.jpg) z nadrzędnego katalogu quizy/
+        // Reakcja awatara przy każdym pojedynczym pytaniu
         const avatarImg = isCorrect ? '../bartek_brawo.jpg' : '../bartek_uwaga.jpg';
         const reactionTitle = isCorrect
             ? '🎉 Brawo! Świetna odpowiedź!'
             : '☝️ Uwaga, pułapka! Sprawdź wyjaśnienie poniżej:';
         const borderColor = isCorrect ? '#56D364' : '#f85149';
+        const bgTint = isCorrect ? 'rgba(86, 211, 100, 0.12)' : 'rgba(248, 81, 73, 0.12)';
 
         feedbackBox.className = 'feedback ' + (isCorrect ? 'correct' : 'wrong');
+        feedbackBox.style.cssText = `display: block; margin-top: 1.2rem; padding: 1rem; border-radius: 10px; border: 1px solid ${borderColor}; background: ${bgTint};`;
         feedbackBox.innerHTML = `
             <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
                 <img src="${avatarImg}" alt="Reakcja Bartka" onerror="this.style.display='none'"
@@ -101,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div style="font-weight: bold; font-size: 1rem; margin-bottom: 0.35rem; color: ${borderColor};">
                         ${reactionTitle}
                     </div>
-                    <div style="font-size: 0.92rem; line-height: 1.45;">
+                    <div style="font-size: 0.92rem; line-height: 1.45; color: #e6edf3;">
                         ${current.explanation || ''}
                     </div>
                 </div>
@@ -111,7 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.textContent = (currentIndex < quizQuestions.length - 1)
             ? 'Następne pytanie ➔'
             : '🏆 Zobacz wynik końcowy';
-        nextBtn.classList.remove('hidden');
+        nextBtn.style.display = 'inline-block';
+        nextBtn.style.marginTop = '1rem';
     }
 
     nextBtn.addEventListener('click', () => {
@@ -123,27 +129,62 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 5-stopniowy system oceny i jednoznacznych plików awatarów na ekranie końcowym
     function showFinalResults() {
-        quizBox.classList.add('hidden');
-        resultBox.classList.remove('hidden');
+        quizBox.style.display = 'none';
+        resultBox.style.display = 'block';
 
         const percent = Math.round((score / quizQuestions.length) * 100);
-        let comment = 'Dobra robota! Powtórz jeszcze raz pytania, w których pojawiły się błędy.';
-        if (percent === 100) {
-            comment = 'MISTRZOSTWO ŚWIATA! Bezbłędny wynik — jesteś w 100% gotowy na szóstkę ze sprawdzianu!';
-        } else if (percent >= 80) {
-            comment = 'Świetny wynik! Jeszcze jedno szybkie powtórzenie i masz murowaną piątkę lub szóstkę!';
+        let rankTitle = '';
+        let comment = '';
+        let primaryAvatar = '';
+        let fallbackAvatar = '../bartek_uwaga.jpg';
+        let rankColor = '#f85149';
+
+        if (percent <= 20) {
+            rankTitle = '🥉 Poziom 1 (0–20%): Rozgrzewka';
+            comment = 'Dopiero zaczynamy! Przeczytaj uważnie wyjaśnienia pod pytaniami i kliknij „Zagraj jeszcze raz”, żeby rozbić bank!';
+            primaryAvatar = '../wynik_poziom1_0_20.jpg';
+            fallbackAvatar = '../bartek_uwaga.jpg';
+            rankColor = '#f85149';
+        } else if (percent <= 40) {
+            rankTitle = '🧭 Poziom 2 (21–40%): Odkrywca';
+            comment = 'Pierwsze punkty zdobyte, ale kilka pułapek Cię złapało. Spróbuj ponownie i pobij swój wynik!';
+            primaryAvatar = '../wynik_poziom2_21_40.jpg';
+            fallbackAvatar = '../bartek_uwaga.jpg';
+            rankColor = '#d29922';
+        } else if (percent <= 60) {
+            rankTitle = '⚡ Poziom 3 (41–60%): Uczeń w Formie';
+            comment = 'Połowa drogi za Tobą! Jeszcze jedna szybka powtórka i wejdziesz na poziom eksperta.';
+            primaryAvatar = '../wynik_poziom3_41_60.jpg';
+            fallbackAvatar = '../bartek_uwaga.jpg';
+            rankColor = '#d29922';
+        } else if (percent <= 80) {
+            rankTitle = '🥈 Poziom 4 (61–80%): Solidny Zawodnik';
+            comment = 'Bardzo dobry wynik! Niewiele zabrakło do podium — powtórz jeszcze raz trudniejsze pytania, żeby wskoczyć powyżej 80%!';
+            primaryAvatar = '../wynik_poziom4_61_80.jpg';
+            fallbackAvatar = '../bartek_uwaga.jpg';
+            rankColor = '#58a6ff';
+        } else {
+            rankTitle = '🏆 Poziom 5 (81–100%): Mistrz Akademii APEX!';
+            comment = 'REWELACJA! Wynik powyżej 80% — jesteś w mistrzowskiej formie i w 100% gotowy na piątkę lub szóstkę ze sprawdzianu!';
+            primaryAvatar = '../wynik_poziom5_81_100.jpg';
+            fallbackAvatar = '../bartek_brawo.jpg';
+            rankColor = '#56D364';
         }
 
         finalScoreText.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; margin: 1rem 0;">
-                <img src="../bartek_brawo.jpg" alt="Gratulacje" onerror="this.style.display='none'"
-                     style="width: 110px; height: 110px; object-fit: contain; background: #ffffff; border-radius: 12px; border: 2px solid #56D364; padding: 4px;">
+            <div style="display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; margin: 1rem 0; padding: 1rem; border-radius: 10px; border: 1px solid ${rankColor}; background: rgba(22, 27, 34, 0.9);">
+                <img src="${primaryAvatar}" alt="Status końcowy" onerror="this.onerror=null; this.src='${fallbackAvatar}';"
+                     style="width: 115px; height: 115px; object-fit: contain; background: #ffffff; border-radius: 12px; border: 2px solid ${rankColor}; padding: 4px;">
                 <div style="flex: 1; min-width: 220px;">
-                    <p style="font-size: 1.2rem; font-weight: bold; margin: 0 0 0.4rem 0;">
+                    <div style="font-size: 1.05rem; font-weight: bold; color: ${rankColor}; margin-bottom: 0.3rem;">
+                        ${rankTitle}
+                    </div>
+                    <p style="font-size: 1.25rem; font-weight: bold; margin: 0 0 0.45rem 0; color: #e6edf3;">
                         Zdobyłeś ${score} z ${quizQuestions.length} punktów (${percent}%)!
                     </p>
-                    <p style="margin: 0; color: #8b949e;">${comment}</p>
+                    <p style="margin: 0; color: #8b949e; line-height: 1.45;">${comment}</p>
                 </div>
             </div>
         `;
@@ -152,8 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
     restartBtn.addEventListener('click', () => {
         currentIndex = 0;
         score = 0;
-        resultBox.classList.add('hidden');
-        quizBox.classList.remove('hidden');
+        resultBox.style.display = 'none';
+        quizBox.style.display = 'block';
         loadQuestion();
     });
 
