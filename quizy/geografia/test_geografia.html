@@ -6,7 +6,7 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Trener Geografii | Bartek Czyżyk</title>
     <link rel="icon" type="image/png" href="../../favicon_bartek.png">
-    <link rel="stylesheet" href="../historia/quiz_sp2.css">
+    <link rel="stylesheet" href="../quiz_style.css">
 </head>
 <body>
     <div class="container">
@@ -16,7 +16,7 @@
             <p class="subtitle">Interaktywny trening wiedzy • Klasa 5 (SP nr 2 w Jeleniej Górze)</p>
         </header>
 
-        <!-- Kontener gry (obsługiwany przez silnik quizu) -->
+        <!-- Kontener gry (obsługiwany przez wspólny silnik quizy/quiz_silnik.js) -->
         <main id="quiz-app">
             <div id="quiz-box" class="card">
                 <div class="progress-bar">
@@ -45,8 +45,8 @@
         </footer>
     </div>
 
-    <!-- Podpięcie bazy pytań z geografii oraz sprawdzonego silnika -->
+    <!-- Podpięcie lokalnej bazy pytań oraz wspólnego silnika z katalogu quizy/ -->
     <script src="geografia_pytania.js"></script>
-    <script src="../historia/quiz_sp2_silnik.js"></script>
+    <script src="../quiz_silnik.js"></script>
 </body>
 </html>
