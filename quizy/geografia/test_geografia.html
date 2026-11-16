@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Trener Geografii (40 pytań) | Bartek Czyżyk</title>
+    <link rel="icon" type="image/png" href="../../favicon_bartek.png">
+    <link rel="stylesheet" href="../quiz_style.css">
+    <style>
+        .module-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; background: #161b22; padding: 0.85rem; border-radius: 10px; border: 1px solid #30363d; }
+        .mod-btn { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; padding: 0.5rem 0.85rem; border-radius: 6px; cursor: pointer; font-size: 0.86rem; font-weight: bold; transition: all 0.15s ease; }
+        .mod-btn:hover { border-color: #56D364; color: #ffffff; }
+        .mod-btn.active { background: #238636; color: #ffffff; border-color: #56D364; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="quiz-header">
+            <a href="../../index.html" class="back-link">⬅ Wróć na stronę główną</a>
+            <h1>🌍 Geografia – Trener Przed Sprawdzianem</h1>
+            <p class="subtitle">Interaktywny trening wiedzy • Klasa 5 (SP nr 2 w Jeleniej Górze)</p>
+        </header>
+
+        <section style="background: #161b22; border: 1px solid #30363d; border-left: 4px solid #56D364; border-radius: 10px; padding: 1.1rem; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;">
+            <img src="nauka_geografia.jpg" alt="Bartek uczy się geografii" style="width: 165px; height: 165px; object-fit: cover; border-radius: 10px; border: 2px solid #56D364;">
+            <div style="flex: 1; min-width: 240px;">
+                <h2 style="margin: 0 0 0.45rem 0; color: #56D364; font-size: 1.15rem;">👋 Hej! Tu Bartek — zapraszam Cię na mój trening z geografii!</h2>
+                <p style="margin: 0 0 0.55rem 0; color: #e6edf3; font-size: 0.94rem;">
+                    Zamiast siedzieć godzinami nad podręcznikiem i wkuwać na pamięć, zrobiłem dla nas tę aplikację, żeby nauka przed klasówką była jak dobra gra. 
+                    Możesz ćwiczyć pojedynczymi tematami po 10 pytań albo odpalić Wielki Test ze wszystkich 40 pytań!
+                </p>
+                <span style="font-size: 0.84rem; color: #58a6ff; font-weight: bold;">🎯 Wyzwanie: Dasz radę przejść cały quiz bez ani jednego błędu? Sprawdź się i powalcz o szóstkę!</span>
+            </div>
+        </section>
+
+        <nav class="module-bar" aria-label="Wybór działu tematycznego">
+            <button class="mod-btn active" onclick="selectGeoModule('all', this)">🏆 Wszystko (40 pytań)</button>
+            <button class="mod-btn" onclick="selectGeoModule('krajobrazy', this)">1️⃣ Krajobrazy Polski (10)</button>
+            <button class="mod-btn" onclick="selectGeoModule('wybrzeze', this)">2️⃣ Wybrzeże Słowińskie (10)</button>
+            <button class="mod-btn" onclick="selectGeoModule('mazury', this)">3️⃣ Pojezierze Mazurskie (10)</button>
+            <button class="mod-btn" onclick="selectGeoModule('mazowsze', this)">4️⃣ Nizina Mazowiecka (10)</button>
+        </nav>
+
+        <main id="quiz-app">
+            <div id="quiz-box" class="card">
+                <div class="progress-bar">
+                    <span id="question-counter">Pytanie 1 / 40</span>
+                    <span id="score-counter">Wynik: 0 pkt</span>
+                </div>
+                <h2 id="question-text">Ładowanie pytań z geografii...</h2>
+                <div id="answers-container" class="answers-grid"></div>
+                <div id="feedback-box" class="feedback hidden"></div>
+                <button id="next-btn" class="btn-primary hidden">Następne pytanie ➔</button>
+            </div>
+
+            <div id="result-box" class="card hidden">
+                <h2>🏆 Koniec treningu z geografii!</h2>
+                <p id="final-score-text"></p>
+                <div id="summary-details"></div>
+                <button id="restart-btn" class="btn-primary">🔄 Zagraj jeszcze raz</button>
+                <a href="../../index.html" class="btn-secondary">🏠 Powrót do Centrum Treningowego</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="geografia_pytania.js"></script>
+    <script src="../quiz_silnik.js"></script>
+    <script src="../quiz_stopka.js"></script>
+    <script>
+        function selectGeoModule(moduleKey, btnElement) {
+            document.querySelectorAll('.mod-btn').forEach(btn => btn.classList.remove('active'));
+            if (btnElement) btnElement.classList.add('active');
+
+            if (moduleKey === 'all') {
+                quizQuestions = [
+                    ...geoModules.krajobrazy,
+                    ...geoModules.wybrzeze,
+                    ...geoModules.mazury,
+                    ...geoModules.mazowsze
+                ];
+            } else if (geoModules[moduleKey]) {
+                quizQuestions = [...geoModules[moduleKey]];
+            }
+
+            const restartBtn = document.getElementById('restart-btn');
+            if (restartBtn) restartBtn.click();
+        }
+    </script>
+</body>
+</html>

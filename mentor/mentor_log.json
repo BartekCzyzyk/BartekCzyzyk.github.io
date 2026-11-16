@@ -1,7 +1,7 @@
 {
   "uczen": "Bartek Czyżyk",
   "poziom": "Junior Web & Scratch Architect (Klasa 5B)",
-  "ostatnia_aktualizacja": "2026-11-14",
+  "ostatnia_aktualizacja": "2026-11-16",
   "zdobyte_umiejetnosci": [
     "Podstawy HTML5 i semantyczna struktura strony",
     "Stylowanie CSS3 (Dark Mode, Flexbox, karty UI)",
@@ -20,6 +20,24 @@
       "projekt": "Quiz Historyczny SP 2 & Centrum Treningowe",
       "podsumowanie": "Aktualizacja sekcji testowej stylów przycisków i integracja zespołu przy rozbudowie modułu quizowego.",
       "wskazowka_do_weryfikacji": "Skoro sekcja przycisków jest przetestowana z ekipą, zerknijmy teraz na zapowiadaną optymalizację grafik JPG – skompresowanie ich sprawi, że strona odpali się błyskawicznie na każdym telefonie."
+    },
+    {
+      "data": "2026-11-16",
+      "projekt": "Wizytówka & Centrum Treningowe SP 2",
+      "podsumowanie": "Wdrożenie dedykowanej ikony favicon oraz apple-touch-icon z mechanizmem odświeżania pamięci podręcznej.",
+      "wskazowka_do_weryfikacji": "Upewnij się, że plik `favicon_bartek.png` jest zoptymalizowany pod kątem wagi i znajduje się w głównym katalogu projektu. W kolejnym kroku możemy wrócić do skompresowania pozostałych grafik JPG na stronie, żeby całość śmigała błyskawicznie!"
+    },
+    {
+      "data": "2026-11-16",
+      "projekt": "Centrum Treningowe – Moduł Geograficzny",
+      "podsumowanie": "Wdrożenie nowej karty trenera geografii z dedykowanym obramowaniem oraz uporządkowanie struktury komentarzy HTML.",
+      "wskazowka_do_weryfikacji": "Zauważ, że style karty masz wpisane bezpośrednio w `style=\"...\"` – w wolnej chwili możesz przenieść je do klasy CSS (np. `.quiz-card`), żeby kod był jeszcze zgrabniejszy i gotowy do szybkiego użycia przy kolejnych przedmiotach!"
+    },
+    {
+      "data": "2026-11-16",
+      "projekt": "Centrum Treningowe – Moduł Geograficzny",
+      "podsumowanie": "Wdrożenie odświeżonej wizualnie karty trenera geografii z charakterystycznym zielonym akcentem krawędziowym.",
+      "wskazowka_do_weryfikacji": "Rzuć okiem tuż pod nowo dodany kod – wygląda na to, że została tam poprzednia wersja sekcji geografii. Wystarczy usunąć ten stary, zdublowany blok, aby użytkownicy nie widzieli dwóch podobnych kart obok siebie!"
     }
   ]
 }

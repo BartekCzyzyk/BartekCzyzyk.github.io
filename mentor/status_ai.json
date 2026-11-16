@@ -1,7 +1,7 @@
 {
-  "data": "14.11.2026",
-  "projekt": "Quiz Historyczny SP 2 & Centrum Treningowe",
-  "pochwala": "Świetna robota, Bartek! Bardzo podoba mi się, że działacie zespołowo i włączacie Olę do wspólnego sprawdzania stylów przycisków .button-quiz. Regularne zapisywanie postępów w gicie to nawyk prawdziwego programisty, który procentuje przy każdym projekcie.",
-  "wskazowka": "Skoro sekcja przycisków jest przetestowana z ekipą, zerknijmy teraz na zapowiadaną optymalizację grafik JPG – skompresowanie ich sprawi, że strona odpali się błyskawicznie na każdym telefonie.",
-  "odznaka": "Zespołowy Tester Kodu 🤝"
+  "data": "16.11.2026",
+  "projekt": "Centrum Treningowe – Moduł Geograficzny",
+  "pochwala": "Świetna robota z dopracowaniem wyglądu karty trenera – ten zielony akcent na lewej krawędzi (`border-left: 5px solid #56D364`) prezentuje się mega nowocześnie i nadaje całości profesjonalny charakter! Super, że od razu podpiąłeś przygotowaną klasę `button-quiz` i zadbałeś o czytelny opis dla klasy 5.",
+  "wskazowka": "Rzuć okiem tuż pod nowo dodany kod – wygląda na to, że została tam poprzednia wersja sekcji geografii. Wystarczy usunąć ten stary, zdublowany blok, aby użytkownicy nie widzieli dwóch podobnych kart obok siebie!",
+  "odznaka": "Projektant Nowoczesnego UI 🌍"
 }
