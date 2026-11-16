@@ -1,5 +1,27 @@
-// Wspólny silnik interaktywnych quizów Akademii APEX (z Fajerwerkiem Reakcji Awatara .jpg)
+// Wspólny silnik interaktywnych quizów Akademii APEX (Fajerwerk Reakcji Awatara .jpg + Automatyczna Stopka)
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Automatyczne wstrzyknięcie spójnej stopki Akademii APEX pod każdym quizem
+    const mainContainer = document.querySelector('.container') || document.body;
+    if (mainContainer && !document.getElementById('apex-quiz-footer')) {
+        const footer = document.createElement('footer');
+        footer.id = 'apex-quiz-footer';
+        footer.style.cssText = 'margin-top: 2.2rem; padding-top: 1.1rem; border-top: 1px solid #30363d; text-align: center; font-size: 0.85rem; color: #8b949e; line-height: 1.6;';
+        footer.innerHTML = `
+            <div>
+                🚀 Aplikacja stworzona przez <strong>Bartka (11 lat)</strong> w ramach programu 
+                <a href="https://github.io" target="_blank" style="color: #56D364; text-decoration: none; font-weight: bold;">
+                    🏫 Akademii Cyfrowej Inżynierii APEX (Sarenka Software Kids)
+                </a>
+            </div>
+            <div style="font-size: 0.78rem; margin-top: 0.25rem;">
+                Architektura systemu i mentoring: <a href="https://github.io" target="_blank" style="color: #58a6ff; text-decoration: none;">mgr inż. Wojciech Czyżyk</a> • 
+                <a href="https://github.io" target="_blank" style="color: #56D364; text-decoration: underline;">Poznaj naszą szkołę i zapisz się na zajęcia ➔</a>
+            </div>
+        `;
+        mainContainer.appendChild(footer);
+    }
+
+    // 2. Weryfikacja bazy pytań
     if (typeof quizQuestions === 'undefined' || !Array.isArray(quizQuestions) || quizQuestions.length === 0) {
         return;
     }
