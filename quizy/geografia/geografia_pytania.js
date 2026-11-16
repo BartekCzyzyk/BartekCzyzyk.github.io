@@ -457,5 +457,84 @@ let quizQuestions = [
     ...geoModules.krajobrazy,
     ...geoModules.wybrzeze,
     ...geoModules.mazury,
-    ...geoModules.mazowsze
+    ...geoModules.mazowsze,
+    ...geoModules.obrazki
+
+    // -------------------------- DZIAŁ 5: Mapy, przekroje i przyroda na zdjęciach (6 pytań obrazkowych) -----------------
+    obrazki: [
+        {
+            question: "Spójrz na mapę pasów rzeźby terenu Polski. Jaki pas oznaczono numerem 2 (tuż na południe od pobrzeży)?",
+            image: "geo_pasy_polski.jpg",
+            answers: [
+                "Pas pojezierzy (m.in. Mazurskie i Pomorskie)",
+                "Pas Wyżyn Polskich",
+                "Pas Kotlin Podkarpackich",
+                "Pas Nizin Środkowopolskich"
+            ],
+            correct: 0,
+            explanation: "Licząc od północy (od Bałtyku): 1 to pobrzeża, 2 to pas pojezierzy, 3 to Niziny Środkowopolskie, 4 to Wyżyny Polskie, 5 to Kotliny Podkarpackie, a 6 to góry."
+        },
+        {
+            question: "Jaki typ wybrzeża morskiego przedstawia ilustracja (wysoki, stromy brzeg podcinany przez fale sztormowe)?",
+            image: "geo_klif_wydma.jpg",
+            answers: [
+                "Wybrzeże klifowe",
+                "Wybrzeże niskie z szeroką plażą",
+                "Jezioro przybrzeżne",
+                "Dolinę rzeczną"
+            ],
+            correct: 0,
+            explanation: "Wysokie, strome wybrzeże podcinane bezpośrednio przez fale sztormowe nazywamy wybrzeżem klifowym."
+        },
+        {
+            question: "Spójrz na schemat brzegu Bałtyku. Jak nazywa się wąski, piaszczysty wał usypany przez prąd przybrzeżny, który odciął zatokę, tworząc jezioro przybrzeżne?",
+            image: "geo_mierzeja_jezioro.jpg",
+            answers: [
+                "Mierzeja",
+                "Wysoczyzna",
+                "Klif",
+                "Kotlina"
+            ],
+            correct: 0,
+            explanation: "Prąd przybrzeżny nanosi piasek, tworząc wąską mierzeję, która stopniowo odcina zatokę od morza i zamienia ją w jezioro przybrzeżne (np. Łebsko)."
+        },
+        {
+            question: "Rozpoznaj na ilustracji chronioną roślinę pionierską o niebieskawych, kolczastych liściach, która zasiedla ruchome wydmy nad Bałtykiem:",
+            image: "geo_mikolajek.jpg",
+            answers: [
+                "Mikołajek nadmorski",
+                "Piaskownica zwyczajna",
+                "Sosna zwyczajna",
+                "Grzybień biały"
+            ],
+            correct: 0,
+            explanation: "To mikołajek nadmorski – objęta ścisłą ochroną roślina pionierska rosnąca na piaszczystych wydmach Wybrzeża Słowińskiego."
+        },
+        {
+            question: "Jak nazywa się ten rzadki ptak drapieżny widoczny na ilustracji, który gniazduje nad jeziorami i chwyta ryby długimi szponami?",
+            image: "geo_rybolow.jpg",
+            answers: [
+                "Rybołów",
+                "Mewa srebrzysta",
+                "Bocian biały",
+                "Kormoran"
+            ],
+            correct: 0,
+            explanation: "To rybołów – potężny ptak drapieżny potrafiący wypatrzyć rybę z kilkudziesięciu metrów nad powierzchnią wody."
+        },
+        {
+            question: "Jakie zwierzę widoczne na ilustracji znajduje się w herbie Kampinoskiego Parku Narodowego położonego obok Warszawy?",
+            image: "geo_los_kampinos.jpg",
+            answers: [
+                "Łoś",
+                "Żubr",
+                "Jeleń szlachetny",
+                "Wilk"
+            ],
+            correct: 0,
+            explanation: "Symbolem Kampinoskiego Parku Narodowego (gdzie bagna sąsiadują z wydmami porośniętymi borem sosnowym) jest łoś."
+        }
+    ]
+ // -------------------KONIEC ------- DZIAŁ 5: Mapy, przekroje i przyroda na zdjęciach (6 pytań obrazkowych) -----------------
+    
 ];

@@ -40,6 +40,8 @@
             <button class="mod-btn" onclick="selectGeoModule('wybrzeze', this)">2️⃣ Wybrzeże Słowińskie (10)</button>
             <button class="mod-btn" onclick="selectGeoModule('mazury', this)">3️⃣ Pojezierze Mazurskie (10)</button>
             <button class="mod-btn" onclick="selectGeoModule('mazowsze', this)">4️⃣ Nizina Mazowiecka (10)</button>
+            <button class="mod-btn" onclick="selectGeoModule('obrazki', this)">🖼️ Mapy i Przyroda (6)</button>
+
         </nav>
 
         <main id="quiz-app">
@@ -76,8 +78,10 @@
                 quizQuestions = [
                     ...geoModules.krajobrazy,
                     ...geoModules.wybrzeze,
+                    
                     ...geoModules.mazury,
-                    ...geoModules.mazowsze
+                    ...geoModules.mazowsze,
+                    ...geoModules.obrazki
                 ];
             } else if (geoModules[moduleKey]) {
                 quizQuestions = [...geoModules[moduleKey]];
