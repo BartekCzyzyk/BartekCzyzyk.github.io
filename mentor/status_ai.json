@@ -1,7 +1,7 @@
 {
   "data": "14.11.2026",
   "projekt": "Quiz Historyczny SP 2 & Centrum Treningowe",
-  "pochwala": "Świetna robota z architekturą modułową! Rozdzieliłeś pytania i silnik gry na osobne pliki oraz dodałeś sekcję dopingową dla całej drużyny z 5B.",
-  "wskazowka": "Następnym razem sprawdź, czy wszystkie grafiki mają zoptymalizowany rozmiar JPG, żeby strona ładowała się błyskawicznie na telefonach kolegów.",
-  "odznaka": "Architekt Web & Lider Zespołu 5B 🏆"
+  "pochwala": "Świetna robota, Bartek! Bardzo podoba mi się, że działacie zespołowo i włączacie Olę do wspólnego sprawdzania stylów przycisków .button-quiz. Regularne zapisywanie postępów w gicie to nawyk prawdziwego programisty, który procentuje przy każdym projekcie.",
+  "wskazowka": "Skoro sekcja przycisków jest przetestowana z ekipą, zerknijmy teraz na zapowiadaną optymalizację grafik JPG – skompresowanie ich sprawi, że strona odpali się błyskawicznie na każdym telefonie.",
+  "odznaka": "Zespołowy Tester Kodu 🤝"
 }
