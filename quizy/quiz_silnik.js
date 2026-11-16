@@ -32,7 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
         questionCounter.textContent = `Pytanie ${currentIndex + 1} / ${quizQuestions.length}`;
         scoreCounter.textContent = `Wynik: ${score} pkt`;
         questionText.textContent = current.question;
-
+        // -----------Obsługa obrazka nad pytaniem (gdy pytanie posiada pole image)  --------------------------
+        let mediaBox = document.getElementById('question-media-box');
+        if (!mediaBox) {
+            mediaBox = document.createElement('div');
+            mediaBox.id = 'question-media-box';
+            mediaBox.style.cssText = 'margin: 1rem 0; text-align: center;';
+            questionText.parentNode.insertBefore(mediaBox, answersContainer);
+        }
+        if (current.image) {
+            mediaBox.innerHTML = `<img src="${current.image}" alt="Ilustracja do pytania" onerror="this.style.display='none'" style="max-width: 100%; max-height: 260px; border-radius: 10px; border: 2px solid #56D364;">`;
+            mediaBox.style.display = 'block';
+        } else {
+            mediaBox.innerHTML = '';
+            mediaBox.style.display = 'none';
+        }
+    // -----------koniec Obsługa obrazka nad pytaniem (gdy pytanie posiada pole image) -----------------------
         answersContainer.innerHTML = '';
         feedbackBox.style.display = 'none';
         feedbackBox.innerHTML = '';
