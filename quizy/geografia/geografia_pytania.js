@@ -450,19 +450,6 @@ const geoModules = {
             correct: 0,
             explanation: "Na Nizinie Mazowieckiej turyści chętnie zwiedzają gotyckie zamki książąt mazowieckich w Czersku, Ciechanowie oraz Pułtusku."
         }
-    ]
-
-            {
-            question: "Które zamki oprócz Twierdzy Modlin stanowią atrakcję turystyczną Niziny Mazowieckiej?",
-            answers: [
-                "Zamki w Czersku, Ciechanowie i Pułtusku",
-                "Zamki w Malborku i Gniewie",
-                "Zamek w Niedzicy i Czorsztynie",
-                "Zamek Chojnik i Zamek Książ"
-            ],
-            correct: 0,
-            explanation: "Na Nizinie Mazowieckiej turyści chętnie zwiedzają gotyckie zamki książąt mazowieckich w Czersku, Ciechanowie oraz Pułtusku."
-        }
     ],
 
     // DZIAŁ 5: Mapy, przekroje i przyroda na zdjęciach (6 pytań obrazkowych)
