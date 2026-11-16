@@ -1,7 +1,7 @@
 {
-  "data": "14.11.2026",
-  "projekt": "Quiz Historyczny SP 2 & Centrum Treningowe",
-  "pochwala": "Świetna robota, Bartek! Bardzo podoba mi się, że działacie zespołowo i włączacie Olę do wspólnego sprawdzania stylów przycisków .button-quiz. Regularne zapisywanie postępów w gicie to nawyk prawdziwego programisty, który procentuje przy każdym projekcie.",
-  "wskazowka": "Skoro sekcja przycisków jest przetestowana z ekipą, zerknijmy teraz na zapowiadaną optymalizację grafik JPG – skompresowanie ich sprawi, że strona odpali się błyskawicznie na każdym telefonie.",
-  "odznaka": "Zespołowy Tester Kodu 🤝"
+  "data": "16.11.2026",
+  "projekt": "Wizytówka & Centrum Treningowe SP 2",
+  "pochwala": "Świetna robota, Bartek! Dodałeś dedykowaną ikonę strony (favicon) oraz wsparcie dla urządzeń Apple, dzięki czemu Twoja strona wygląda mega profesjonalnie w zakładkach przeglądarki i na ekranach telefonów. Bardzo podoba mi się też sprytny trik z parametrem `?v=1`, który wymusza odświeżenie grafiki w pamięci podręcznej – to cecha prawdziwego web developera!",
+  "wskazowka": "Upewnij się, że plik `favicon_bartek.png` jest zoptymalizowany pod kątem wagi i znajduje się w głównym katalogu projektu. W kolejnym kroku możemy wrócić do skompresowania pozostałych grafik JPG na stronie, żeby całość śmigała błyskawicznie!",
+  "odznaka": "Mistrz Brandingu i Favicona 🎨"
 }
