@@ -1,7 +1,7 @@
 {
   "data": "16.11.2026",
   "projekt": "Centrum Treningowe – Moduł Geograficzny",
-  "pochwala": "Świetna robota z dodaniem nowej sekcji dla klasy 5! Karta trenera geografii wygląda super, a zielona ramka (#56D364) idealnie pasuje do ciemnego motywu. Bardzo podoba mi się też to, jak dbasz o porządek w kodzie – czytelne komentarze początek/koniec i posprzątanie sekcji statystyk to nawyk prawdziwego profesjonalisty.",
-  "wskazowka": "Zauważ, że style karty masz wpisane bezpośrednio w `style=\"...\"` – w wolnej chwili możesz przenieść je do klasy CSS (np. `.quiz-card`), żeby kod był jeszcze zgrabniejszy i gotowy do szybkiego użycia przy kolejnych przedmiotach!",
-  "odznaka": "Nawigator Wiedzy 🌍"
+  "pochwala": "Świetna robota z dopracowaniem wyglądu karty trenera – ten zielony akcent na lewej krawędzi (`border-left: 5px solid #56D364`) prezentuje się mega nowocześnie i nadaje całości profesjonalny charakter! Super, że od razu podpiąłeś przygotowaną klasę `button-quiz` i zadbałeś o czytelny opis dla klasy 5.",
+  "wskazowka": "Rzuć okiem tuż pod nowo dodany kod – wygląda na to, że została tam poprzednia wersja sekcji geografii. Wystarczy usunąć ten stary, zdublowany blok, aby użytkownicy nie widzieli dwóch podobnych kart obok siebie!",
+  "odznaka": "Projektant Nowoczesnego UI 🌍"
 }

@@ -32,6 +32,12 @@
       "projekt": "Centrum Treningowe – Moduł Geograficzny",
       "podsumowanie": "Wdrożenie nowej karty trenera geografii z dedykowanym obramowaniem oraz uporządkowanie struktury komentarzy HTML.",
       "wskazowka_do_weryfikacji": "Zauważ, że style karty masz wpisane bezpośrednio w `style=\"...\"` – w wolnej chwili możesz przenieść je do klasy CSS (np. `.quiz-card`), żeby kod był jeszcze zgrabniejszy i gotowy do szybkiego użycia przy kolejnych przedmiotach!"
+    },
+    {
+      "data": "2026-11-16",
+      "projekt": "Centrum Treningowe – Moduł Geograficzny",
+      "podsumowanie": "Wdrożenie odświeżonej wizualnie karty trenera geografii z charakterystycznym zielonym akcentem krawędziowym.",
+      "wskazowka_do_weryfikacji": "Rzuć okiem tuż pod nowo dodany kod – wygląda na to, że została tam poprzednia wersja sekcji geografii. Wystarczy usunąć ten stary, zdublowany blok, aby użytkownicy nie widzieli dwóch podobnych kart obok siebie!"
     }
   ]
 }
