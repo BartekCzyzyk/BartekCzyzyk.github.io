@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div style="font-size: 0.78rem; margin-top: 0.25rem;">
                 Architektura systemu i mentoring: <a href="https://github.io" target="_blank" style="color: #58a6ff; text-decoration: none;">mgr inż. Wojciech Czyżyk</a> • 
-                <a href="https://github.io" target="_blank" style="color: #56D364; text-decoration: underline;">Poznaj naszą szkołę i zapisz się na zajęcia ➔</a>
+                <a href="https://wojciechczyzyk.github.io/sarenka/index.html" target="_blank" style="color: #56D364; text-decoration: underline;">Poznaj naszą szkołę i zapisz się na zajęcia ➔</a>
             </div>
         `;
         mainContainer.appendChild(footer);
