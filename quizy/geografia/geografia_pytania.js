@@ -458,7 +458,7 @@ let quizQuestions = [
     ...geoModules.wybrzeze,
     ...geoModules.mazury,
     ...geoModules.mazowsze,
-    ...geoModules.obrazki,
+    ...geoModules.obrazki
 
     // -------------------------- DZIAŁ 5: Mapy, przekroje i przyroda na zdjęciach (6 pytań obrazkowych) -----------------
     obrazki: [
