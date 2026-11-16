@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
         footer.innerHTML = `
             <div>
                 🚀 Aplikacja stworzona przez <strong>Bartka (11 lat)</strong> w ramach programu 
-                <a href="https://github.io" target="_blank" style="color: #56D364; text-decoration: none; font-weight: bold;">
+                <a href="https://wojciechczyzyk.github.io/sarenka/index.html" target="_blank" style="color: #56D364; text-decoration: none; font-weight: bold;">
                     🏫 Akademii Cyfrowej Inżynierii APEX (Sarenka Software Kids)
                 </a>
             </div>
             <div style="font-size: 0.78rem; margin-top: 0.25rem;">
-                Architektura systemu i mentoring: <a href="https://github.io" target="_blank" style="color: #58a6ff; text-decoration: none;">mgr inż. Wojciech Czyżyk</a> • 
+                Architektura systemu i mentoring: <a href="https://wojciechczyzyk.github.io" target="_blank" style="color: #58a6ff; text-decoration: none;">mgr inż. Wojciech Czyżyk</a> • 
                 <a href="https://wojciechczyzyk.github.io/sarenka/index.html" target="_blank" style="color: #56D364; text-decoration: underline;">Poznaj naszą szkołę i zapisz się na zajęcia ➔</a>
             </div>
         `;
