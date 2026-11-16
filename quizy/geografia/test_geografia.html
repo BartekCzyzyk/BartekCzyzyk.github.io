@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Trener Geografii | Bartek Czyżyk</title>
+    <link rel="icon" type="image/png" href="../../favicon_bartek.png">
+    <link rel="stylesheet" href="../historia/quiz_sp2.css">
+</head>
+<body>
+    <div class="container">
+        <header class="quiz-header">
+            <a href="../../index.html" class="back-link">⬅ Wróć na stronę główną</a>
+            <h1>🌍 Geografia – Trener Przed Sprawdzianem</h1>
+            <p class="subtitle">Interaktywny trening wiedzy • Klasa 5 (SP nr 2 w Jeleniej Górze)</p>
+        </header>
+
+        <!-- Kontener gry (obsługiwany przez silnik quizu) -->
+        <main id="quiz-app">
+            <div id="quiz-box" class="card">
+                <div class="progress-bar">
+                    <span id="question-counter">Pytanie 1 / 1</span>
+                    <span id="score-counter">Wynik: 0 pkt</span>
+                </div>
+                <h2 id="question-text">Ładowanie pytań z geografii...</h2>
+                <div id="answers-container" class="answers-grid"></div>
+                <div id="feedback-box" class="feedback hidden"></div>
+                <button id="next-btn" class="btn-primary hidden">Następne pytanie ➔</button>
+            </div>
+
+            <div id="result-box" class="card hidden">
+                <h2>🏆 Koniec treningu z geografii!</h2>
+                <p id="final-score-text"></p>
+                <div id="summary-details"></div>
+                <button id="restart-btn" class="btn-primary">🔄 Zagraj jeszcze raz</button>
+                <a href="../../index.html" class="btn-secondary">🏠 Powrót do Centrum Treningowego</a>
+            </div>
+        </main>
+
+        <!-- Dyskretna stopka atrybucyjna Akademii APEX -->
+        <footer style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #30363d; text-align: center; font-size: 0.85rem; color: #8b949e;">
+            🚀 Aplikacja stworzona przez <strong>Bartka (11 lat)</strong> w ramach programu 
+            <a href="https://github.io" target="_blank" style="color: #56D364; text-decoration: none; font-weight: bold;">Akademii Cyfrowej Inżynierii APEX</a>
+        </footer>
+    </div>
+
+    <!-- Podpięcie bazy pytań z geografii oraz sprawdzonego silnika -->
+    <script src="geografia_pytania.js"></script>
+    <script src="../historia/quiz_sp2_silnik.js"></script>
+</body>
+</html>
