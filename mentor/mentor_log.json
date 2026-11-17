@@ -1,7 +1,7 @@
 {
   "uczen": "Bartek Czyżyk",
   "poziom": "Junior Web & Scratch Architect (Klasa 5B)",
-  "ostatnia_aktualizacja": "2026-11-16",
+  "ostatnia_aktualizacja": "2026-11-17",
   "zdobyte_umiejetnosci": [
     "Podstawy HTML5 i semantyczna struktura strony",
     "Stylowanie CSS3 (Dark Mode, Flexbox, karty UI)",
@@ -38,6 +38,12 @@
       "projekt": "Centrum Treningowe – Moduł Geograficzny",
       "podsumowanie": "Wdrożenie odświeżonej wizualnie karty trenera geografii z charakterystycznym zielonym akcentem krawędziowym.",
       "wskazowka_do_weryfikacji": "Rzuć okiem tuż pod nowo dodany kod – wygląda na to, że została tam poprzednia wersja sekcji geografii. Wystarczy usunąć ten stary, zdublowany blok, aby użytkownicy nie widzieli dwóch podobnych kart obok siebie!"
+    },
+    {
+      "data": "2026-11-17",
+      "projekt": "Centrum Treningowe – Trener Biologii",
+      "podsumowanie": "Wdrożenie responsywnej karty misji biologicznej z własną grafiką oraz wprowadzeniem do quizu o budowie komórki.",
+      "wskazowka_do_weryfikacji": "Podobnie jak w module geografii, masz tutaj sporo stylów inline w atrybucie `style=\"...\"` – spróbuj przenieść reguły dla `.mission-card` do sekcji `<style>` w nagłówku, aby kod był jeszcze bardziej przejrzysty."
     }
   ]
 }

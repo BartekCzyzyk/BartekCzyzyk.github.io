@@ -1,7 +1,7 @@
 {
-  "data": "16.11.2026",
-  "projekt": "Centrum Treningowe – Moduł Geograficzny",
-  "pochwala": "Świetna robota z dopracowaniem wyglądu karty trenera – ten zielony akcent na lewej krawędzi (`border-left: 5px solid #56D364`) prezentuje się mega nowocześnie i nadaje całości profesjonalny charakter! Super, że od razu podpiąłeś przygotowaną klasę `button-quiz` i zadbałeś o czytelny opis dla klasy 5.",
-  "wskazowka": "Rzuć okiem tuż pod nowo dodany kod – wygląda na to, że została tam poprzednia wersja sekcji geografii. Wystarczy usunąć ten stary, zdublowany blok, aby użytkownicy nie widzieli dwóch podobnych kart obok siebie!",
-  "odznaka": "Projektant Nowoczesnego UI 🌍"
+  "data": "17.11.2026",
+  "projekt": "Centrum Treningowe – Trener Biologii",
+  "pochwala": "Świetna robota, Bartek! Karta misji biologicznej z flexboxem i responsywnym zawijaniem (`flex-wrap: wrap`) prezentuje się mega profesjonalnie, a dodanie własnej grafiki z dopasowanym `alt` buduje świetny, autorski klimat. Doskonale dobrałeś paletę barw – szmaragdowy akcent idealnie pasuje do tematu biologii!",
+  "wskazowka": "Podobnie jak w module geografii, masz tutaj sporo stylów inline w atrybucie `style=\"...\"` – spróbuj przenieść reguły dla `.mission-card` do sekcji `<style>` w nagłówku, aby kod był jeszcze bardziej przejrzysty.",
+  "odznaka": "Architekt Misji Biologicznych 🔬"
 }
