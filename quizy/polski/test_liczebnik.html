@@ -13,14 +13,25 @@
       <a href="../../index.html" class="btn-link">← Wróć na stronę główną Baty</a>
     </div>
 
-    <div class="card" id="quiz-container">
+    <div class="card" id="quiz-box">
       <span class="tag">🇵🇱 Język Polski • Klasa 5 • Części Mowy</span>
-      <h1 id="quiz-title">Trener: Liczebnik (20 pytań)</h1>
-      <div id="progress" style="margin: 10px 0; font-weight: bold; color: #38bdf8;">Pytanie 1 / 20</div>
-      <h2 id="question" style="margin-bottom: 16px;">Ładowanie pytania...</h2>
-      <div id="options" style="display: flex; flex-direction: column; gap: 10px;"></div>
-      <div id="feedback" style="margin-top: 16px; padding: 12px; border-radius: 8px; display: none;"></div>
-      <button id="next-btn" class="btn-link" style="margin-top: 16px; display: none; cursor: pointer;" onclick="nextQuestion()">Następne pytanie →</button>
+      <h1>Trener: Liczebnik (20 pytań)</h1>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0; font-weight: bold; color: #58a6ff;">
+        <span id="question-counter">Pytanie 1 / 20</span>
+        <span id="score-counter">Wynik: 0 pkt</span>
+      </div>
+
+      <h2 id="question-text" style="margin-bottom: 16px;">Ładowanie pytania...</h2>
+      <div id="answers-container" style="display: flex; flex-direction: column; gap: 10px;"></div>
+      <div id="feedback-box" style="display: none;"></div>
+      <button id="next-btn" class="btn-link" style="display: none; cursor: pointer;">Następne pytanie ➔</button>
+    </div>
+
+    <div class="card" id="result-box" style="display: none;">
+      <h2>🏆 Podsumowanie Treningu: Liczebnik</h2>
+      <div id="final-score-text"></div>
+      <button id="restart-btn" class="btn-link" style="cursor: pointer; margin-top: 10px;">🔄 Zagraj jeszcze raz</button>
     </div>
   </div>
 
