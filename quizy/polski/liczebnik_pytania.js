@@ -1,7 +1,7 @@
-const quizData = [
+const quizQuestions = [
   {
     question: "1. Na jakie pytania odpowiada liczebnik?",
-    options: [
+    answers: [
       "Kto? Co?",
       "Ile? Który z kolei?",
       "Jaki? Jaka? Jakie?",
@@ -12,7 +12,7 @@ const quizData = [
   },
   {
     question: "2. W którym zestawie znajdują się WYŁĄCZNIE liczebniki?",
-    options: [
+    answers: [
       "pięć, drugi, kilkanaście, dwoje",
       "trzy, piątka, dziesiąty, wiele",
       "jeden, podwójnie, sto, czwarty",
@@ -23,7 +23,7 @@ const quizData = [
   },
   {
     question: "3. Jakiego rodzaju jest liczebnik w zdaniu: „Bartek zajął drugie miejsce w turnieju”?",
-    options: [
+    answers: [
       "Liczebnik główny",
       "Liczebnik porządkowy",
       "Liczebnik zbiorowy",
@@ -34,7 +34,7 @@ const quizData = [
   },
   {
     question: "4. Kiedy używamy liczebników zbiorowych (np. dwoje, troje, pięcioro)?",
-    options: [
+    answers: [
       "Zawsze wtedy, gdy liczymy duże przedmioty",
       "Przy nazwach dzieci, młodych zwierząt oraz rzeczowników mających tylko liczbę mnogą (np. drzwi, okulary)",
       "Wyłącznie wtedy, gdy mówimy o ułamkach i częściach całości",
@@ -45,7 +45,7 @@ const quizData = [
   },
   {
     question: "5. Wybierz poprawną formę w zdaniu: „W naszym domu są ______ drzwi wejściowe.”",
-    options: [
+    answers: [
       "dwa",
       "dwie",
       "dwoje",
@@ -56,7 +56,7 @@ const quizData = [
   },
   {
     question: "6. Które zdanie jest napisane POPRAWNIE?",
-    options: [
+    answers: [
       "Czekałem na autobus półtora godziny.",
       "Czekałem na autobus półtorej godziny.",
       "Czekałem na autobus półtorej roku.",
@@ -67,7 +67,7 @@ const quizData = [
   },
   {
     question: "7. Jakiego rodzaju jest liczebnik „kilkadziesiąt”?",
-    options: [
+    answers: [
       "Liczebnik główny",
       "Liczebnik zbiorowy",
       "Liczebnik nieokreślony",
@@ -78,7 +78,7 @@ const quizData = [
   },
   {
     question: "8. Który wyraz w zdaniu: „Kupiłem w sklepie półtora kilograma jabłek i dwadzieścia śliwek” to liczebnik ułamkowy?",
-    options: [
+    answers: [
       "kilograma",
       "dwadzieścia",
       "półtora",
@@ -89,7 +89,7 @@ const quizData = [
   },
   {
     question: "9. W którym zdaniu słowo „dwójka” NIE JEST liczebnikiem?",
-    options: [
+    answers: [
       "W żadnym — słowo 'dwójka' to zawsze rzeczownik (kto? co?)",
       "Tylko wtedy, gdy stoi przed czasownikiem",
       "Tylko wtedy, gdy oznacza ocenę szkolną",
@@ -100,7 +100,7 @@ const quizData = [
   },
   {
     question: "10. Wybierz poprawną pisownię daty i wieku:",
-    options: [
+    answers: [
       "Żyjemy w XXI. wieku, a dziś jest 19. listopada.",
       "Żyjemy w XXI wieku, a dziś jest 19 listopada.",
       "Żyjemy w 21 wieku, a dziś jest 19. listopada.",
@@ -111,7 +111,7 @@ const quizData = [
   },
   {
     question: "11. Która forma liczebnika w zdaniu jest poprawna: „Na wycieczkę pojechało ______ uczniów”?",
-    options: [
+    answers: [
       "dwadzieścia jeden",
       "dwudziestu jeden",
       "dwudziestu jednego",
@@ -122,7 +122,7 @@ const quizData = [
   },
   {
     question: "12. Wskaż liczebnik w zdaniu: „Na podwórku bawiło się sześcioro małych kociąt.”",
-    options: [
+    answers: [
       "podwórku",
       "małych",
       "sześcioro",
@@ -132,8 +132,8 @@ const quizData = [
     explanation: "'Sześcioro' to liczebnik zbiorowy określający liczbę młodych zwierząt (kociąt)."
   },
   {
-    question: "13. Jaką częścią mowy jest wyróżniony wyraz: „Bata sprawdził zadanie **dwukrotnie**”?",
-    options: [
+    question: "13. Jaką częścią mowy jest wyróżniony wyraz: „Bata sprawdził zadanie dwukrotnie”?",
+    answers: [
       "Liczebnikiem głównym",
       "Liczebnikiem porządkowym",
       "Przysłówkiem (odpowiada na pytanie: jak?)",
@@ -144,7 +144,7 @@ const quizData = [
   },
   {
     question: "14. Wskaż poprawną formę w zdaniu: „Do mety dobiegło ______ zawodników.”",
-    options: [
+    answers: [
       "pięć",
       "pięciu",
       "pięcioro",
@@ -155,7 +155,7 @@ const quizData = [
   },
   {
     question: "15. Które z poniższych słów to liczebnik ułamkowy?",
-    options: [
+    answers: [
       "ćwierć",
       "czwarty",
       "czworo",
@@ -166,7 +166,7 @@ const quizData = [
   },
   {
     question: "16. Ile liczebników znajduje się w zdaniu: „Troje dzieci zjadło po półtora pączka i wypiło dwie szklanki soku”?",
-    options: [
+    answers: [
       "1",
       "2",
       "3",
@@ -177,7 +177,7 @@ const quizData = [
   },
   {
     question: "17. Który zapis liczebnika porządkowego cyfrą jest poprawny?",
-    options: [
+    answers: [
       "Zająłem 1. miejsce w konkursie.",
       "Zająłem 1-sze miejsce w konkursie.",
       "Zająłem 1-wsze miejsce w konkursie.",
@@ -188,7 +188,7 @@ const quizData = [
   },
   {
     question: "18. Wybierz poprawną formę: „Brakuje mi jeszcze ______ złotych do nowej gry.”",
-    options: [
+    answers: [
       "pięćdziesiąt",
       "pięćdziesięciu",
       "pięćdziesięcioro",
@@ -199,7 +199,7 @@ const quizData = [
   },
   {
     question: "19. Jakiego rodzaju jest liczebnik „kilkanaście” w zdaniu: „Przeczytałem już kilkanaście stron książki”?",
-    options: [
+    answers: [
       "Liczebnik główny",
       "Liczebnik porządkowy",
       "Liczebnik nieokreślony",
@@ -210,7 +210,7 @@ const quizData = [
   },
   {
     question: "20. W którym zdaniu poprawnie użyto liczebnika zbiorowego?",
-    options: [
+    answers: [
       "Na ławce siedziało czworo chłopców.",
       "Na ławce siedziało czworo dziewczynek.",
       "Na ławce siedziało czworo dzieci.",
