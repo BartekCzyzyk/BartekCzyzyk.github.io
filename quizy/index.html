@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centrum Treningowe Quizów | Bartek Czyżyk</title>
+  <link rel="icon" type="image/png" href="../favicon_bartek.png">
+  <link rel="stylesheet" href="quiz_style.css">
+  <style>
+    .hub-top-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; }
+    .hub-hero { background: #161b22; border: 1px solid #30363d; border-left: 4px solid #56D364; border-radius: 12px; padding: 1.3rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+    .hub-hero img { width: 185px; height: 185px; object-fit: cover; border-radius: 12px; border: 2px solid #56D364; }
+    .kpi-pill { display: inline-block; margin-top: 0.6rem; padding: 0.35rem 0.8rem; border-radius: 999px; background: rgba(86, 211, 100, 0.14); border: 1px solid #56D364; color: #56D364; font-size: 0.84rem; font-weight: bold; }
+    .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .subject-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.2rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .subject-tag { display: inline-block; font-size: 0.78rem; font-weight: bold; color: #58a6ff; background: rgba(88, 166, 255, 0.12); padding: 0.25rem 0.65rem; border-radius: 999px; margin-bottom: 0.6rem; }
+    .subject-card h3 { margin: 0 0 0.5rem 0; color: #e6edf3; font-size: 1.15rem; }
+    .subject-card p { color: #8b949e; font-size: 0.92rem; line-height: 1.45; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hub-top-bar">
+      <a href="../index.html" class="back-link">⬅ Powrót do Portfolio (Bartek Czyżyk)</a>
+    </div>
+
+    <!-- Wizytówka Centrum Treningowego Baty -->
+    <section class="hub-hero">
+      <img src="centrum_quizow.jpg" alt="Bata w Centrum Treningowym Quizów z kotem" onerror="this.src='bartek_brawo.jpg'">
+      <div style="flex: 1; min-width: 240px;">
+        <h1 style="margin: 0 0 0.5rem 0; font-size: 1.65rem; color: #ffffff;">🚀 Centrum Treningowe Quizów Baty</h1>
+        <p style="margin: 0; color: #e6edf3; line-height: 1.5; font-size: 0.95rem;">
+          Zamiast nudnego wkuwania z podręcznika przed klasówką, budujemy z Tatą własne interaktywne gry edukacyjne dla klasy 5 (SP nr 2 w Jeleniej Górze). Wybierz przedmiot, sprawdź swoją wiedzę i powalcz o wynik powyżej 80% na szóstkę!
+        </p>
+        <span class="kpi-pill">🎯 Cel KPI: min. 80% poprawnych odpowiedzi | Aktywne przedmioty: 3+</span>
+      </div>
+    </section>
+
+    <h2 style="color: #e6edf3; margin-bottom: 0.4rem;">📚 Dostępne Moduły Przedmiotowe</h2>
+
+    <div class="hub-grid">
+      <!-- Moduł 1: Język Polski -->
+      <div class="subject-card">
+        <div>
+          <span class="subject-tag">🇵🇱 Język Polski • 20 Pytań • Klasa 5</span>
+          <h3>Części Mowy: Liczebnik</h3>
+          <p>Liczebniki główne, porządkowe, zbiorowe, ułamkowe i nieokreślone. Szkolne pułapki typu <em>„półtorej godziny”</em>, <em>„dwoje drzwi”</em> oraz pisownia dat i wieków.</p>
+        </div>
+        <a href="polski/test_liczebnik.html" class="btn-primary" style="text-align: center; text-decoration: none;">🚀 Rozpocznij Test z Polskiego</a>
+      </div>
+
+      <!-- Moduł 2: Geografia -->
+      <div class="subject-card">
+        <div>
+          <span class="subject-tag">🌍 Geografia • 46 Pytań • 5 Działów</span>
+          <h3>Krajobrazy Polski i Mapy</h3>
+          <p>Wybrzeże Słowińskie, Pojezierze Mazurskie, Nizina Mazowiecka oraz rozpoznawanie parków narodowych i ukształtowania terenu na ilustracjach.</p>
+        </div>
+        <a href="geografia/test_geografia.html" class="btn-primary" style="text-align: center; text-decoration: none;">🚀 Rozpocznij Test z Geografii</a>
+      </div>
+
+      <!-- Moduł 3: Historia -->
+      <div class="subject-card">
+        <div>
+          <span class="subject-tag">🏰 Historia • Klasa 5</span>
+          <h3>Powtórka Przed Sprawdzianem</h3>
+          <p>Interaktywny trening najważniejszych dat, postaci i wydarzeń historycznych z programu klasy piątej.</p>
+        </div>
+        <a href="historia/test_historia.html" class="btn-primary" style="text-align: center; text-decoration: none;">🚀 Rozpocznij Test z Historii</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
