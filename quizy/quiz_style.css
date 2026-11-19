@@ -288,3 +288,50 @@ h1 { font-size: 1.4rem; color: var(--accent); }
   border-color: #56D364;
 }
 
+
+/* =========================================================
+   PRZYCISKI W STYLU STRONY GŁÓWNEJ BARTKA (.button-quiz / .button-pdf)
+   ========================================================= */
+
+.button-quiz {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #2ea043 0%, #238636 100%);
+  color: #ffffff !important;
+  font-size: 1.05rem;
+  font-weight: bold;
+  padding: 14px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid #56D364;
+  box-shadow: 0 4px 12px rgba(46, 160, 67, 0.35);
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button-quiz:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(86, 211, 100, 0.45);
+}
+
+.button-pdf {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #21262d;
+  color: #56D364 !important;
+  font-size: 1.05rem;
+  font-weight: bold;
+  padding: 13px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid #56D364;
+  text-align: center;
+  transition: background-color 0.15s ease;
+}
+
+.button-pdf:hover {
+  background-color: rgba(86, 211, 100, 0.15);
+}
+
