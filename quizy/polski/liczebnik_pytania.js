@@ -1,4 +1,4 @@
-const quizQuestions = [
+let quizQuestions = [
   {
     question: "1. Na jakie pytania odpowiada liczebnik?",
     answers: [
