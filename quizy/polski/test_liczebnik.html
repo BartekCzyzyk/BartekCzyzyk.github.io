@@ -1,42 +1,88 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Język Polski (Klasa 5): Liczebnik | Poligon Baty</title>
-  <link rel="icon" type="image/png" href="../../favicon_bartek.png">
-  <link rel="stylesheet" href="../quiz_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Trener Języka Polskiego: Liczebnik (20 pytań) | Bartek Czyżyk</title>
+    <link rel="icon" type="image/png" href="../../favicon_bartek.png">
+    <link rel="stylesheet" href="../quiz_style.css">
+    <style>
+        .module-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; background: #161b22; padding: 0.85rem; border-radius: 10px; border: 1px solid #30363d; }
+        .mod-btn { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; padding: 0.5rem 0.85rem; border-radius: 6px; cursor: pointer; font-size: 0.86rem; font-weight: bold; transition: all 0.15s ease; }
+        .mod-btn:hover { border-color: #56D364; color: #ffffff; }
+        .mod-btn.active { background: #238636; color: #ffffff; border-color: #56D364; }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div style="margin-bottom: 1rem;">
-      <a href="../../index.html" class="btn-link">← Wróć na stronę główną Baty</a>
+    <div class="container">
+        <header class="quiz-header">
+            <a href="../../index.html" class="back-link">⬅ Wróć na stronę główną</a>
+            <h1>🇵🇱 Język Polski – Trener Przed Sprawdzianem</h1>
+            <p class="subtitle">Części mowy: Liczebnik • Klasa 5 (SP nr 2 w Jeleniej Górze)</p>
+        </header>
+
+        <section style="background: #161b22; border: 1px solid #30363d; border-left: 4px solid #56D364; border-radius: 10px; padding: 1.1rem; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;">
+            <img src="nauka_polski.jpg" alt="Bartek uczy się języka polskiego" onerror="this.src='../bartek_brawo.jpg'" style="width: 165px; height: 165px; object-fit: cover; border-radius: 10px; border: 2px solid #56D364;">
+            <div style="flex: 1; min-width: 240px;">
+                <h2 style="margin: 0 0 0.45rem 0; color: #56D364; font-size: 1.15rem;">👋 Hej! Tu Bartek — zapraszam Cię na mój trening z języka polskiego!</h2>
+                <p style="margin: 0 0 0.55rem 0; color: #e6edf3; font-size: 0.94rem;">
+                    Zamiast siedzieć godzinami nad podręcznikiem i wkuwać regułki o liczebnikach głównych, porządkowych czy zbiorowych, zrobiłem dla nas ten trening! 
+                    Możesz ćwiczyć po 10 pytań albo odpalić Wielki Test ze wszystkich 20 pytań i rozpracować wszystkie szkolne pułapki.
+                </p>
+                <span style="font-size: 0.84rem; color: #58a6ff; font-weight: bold;">🎯 Wyzwanie: Dasz radę przejść cały quiz bez ani jednego błędu? Sprawdź się i powalcz o szóstkę!</span>
+            </div>
+        </section>
+
+        <nav class="module-bar" aria-label="Wybór zestawu pytań">
+            <button class="mod-btn active" onclick="selectPolishRange('all', this)">🏆 Wszystko (20 pytań)</button>
+            <button class="mod-btn" onclick="selectPolishRange('part1', this)">1️⃣ Podstawy i rodzaje (1–10)</button>
+            <button class="mod-btn" onclick="selectPolishRange('part2', this)">2️⃣ Odmiana i pułapki (11–20)</button>
+        </nav>
+
+        <main id="quiz-app">
+            <div id="quiz-box" class="card">
+                <div class="progress-bar">
+                    <span id="question-counter">Pytanie 1 / 20</span>
+                    <span id="score-counter">Wynik: 0 pkt</span>
+                </div>
+                <h2 id="question-text">Ładowanie pytań z języka polskiego...</h2>
+                <div id="answers-container" class="answers-grid"></div>
+                <div id="feedback-box" class="feedback hidden"></div>
+                <button id="next-btn" class="btn-primary hidden">Następne pytanie ➔</button>
+            </div>
+
+            <div id="result-box" class="card hidden">
+                <h2>🏆 Koniec treningu z języka polskiego!</h2>
+                <p id="final-score-text"></p>
+                <div id="summary-details"></div>
+                <button id="restart-btn" class="btn-primary">🔄 Zagraj jeszcze raz</button>
+                <a href="../../index.html" class="btn-secondary">🏠 Powrót do Centrum Treningowego</a>
+            </div>
+        </main>
     </div>
 
-    <div class="card" id="quiz-box">
-      <span class="tag">🇵🇱 Język Polski • Klasa 5 • Części Mowy</span>
-      <h1>Trener: Liczebnik (20 pytań)</h1>
+    <script src="liczebnik_pytania.js"></script>
+    <script>
+        const allPolishQuestions = [...quizQuestions];
 
-      <div style="display: flex; justify-content: space-between; align-items: center; margin: 12px 0; font-weight: bold; color: #58a6ff;">
-        <span id="question-counter">Pytanie 1 / 20</span>
-        <span id="score-counter">Wynik: 0 pkt</span>
-      </div>
+        function selectPolishRange(rangeKey, btnElement) {
+            document.querySelectorAll('.mod-btn').forEach(btn => btn.classList.remove('active'));
+            if (btnElement) btnElement.classList.add('active');
 
-      <h2 id="question-text" style="margin-bottom: 16px;">Ładowanie pytania...</h2>
-      <div id="answers-container" style="display: flex; flex-direction: column; gap: 10px;"></div>
-      <div id="feedback-box" style="display: none;"></div>
-      <button id="next-btn" class="btn-link" style="display: none; cursor: pointer;">Następne pytanie ➔</button>
-    </div>
+            if (rangeKey === 'all') {
+                quizQuestions = [...allPolishQuestions];
+            } else if (rangeKey === 'part1') {
+                quizQuestions = allPolishQuestions.slice(0, 10);
+            } else if (rangeKey === 'part2') {
+                quizQuestions = allPolishQuestions.slice(10, 20);
+            }
 
-    <div class="card" id="result-box" style="display: none;">
-      <h2>🏆 Podsumowanie Treningu: Liczebnik</h2>
-      <div id="final-score-text"></div>
-      <button id="restart-btn" class="btn-link" style="cursor: pointer; margin-top: 10px;">🔄 Zagraj jeszcze raz</button>
-    </div>
-  </div>
-
-  <script src="liczebnik_pytania.js"></script>
-  <script src="../quiz_silnik.js"></script>
-  <script src="../quiz_stopka.js"></script>
+            const restartBtn = document.getElementById('restart-btn');
+            if (restartBtn) restartBtn.click();
+        }
+    </script>
+    <script src="../quiz_silnik.js"></script>
+    <script src="../quiz_stopka.js"></script>
 </body>
 </html>
